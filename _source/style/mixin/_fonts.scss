@@ -1,0 +1,23 @@
+@mixin linkNav_titles($f_size, $f_weight, $color, $l_height) {
+  font-family: "Oswald", sans-serif;
+  font-size: $f_size;
+  font-weight: $f_weight;
+  color: $color;
+  line-height: $l_height;
+}
+
+@mixin text($f_size, $f_weight, $color, $l_height) {
+  font-family: "Oxygen", sans-serif;
+  font-size: $f_size;
+  font-weight: $f_weight;
+  color: $color;
+  line-height: $l_height;
+}
+
+@mixin btn_link($f_size, $f_weight, $color, $l_height) {
+  font-family: "Anton", sans-serif;
+  font-size: $f_size;
+  font-weight: $f_weight;
+  color: $color;
+  line-height: $l_height;
+}
