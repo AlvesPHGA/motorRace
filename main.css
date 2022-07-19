@@ -14,11 +14,14 @@ a {
 h1,
 h2 {
   font-size: 3.75rem;
-  line-height: 4.125; }
+  line-height: 4.125rem; }
 
 h3 {
   font-size: 2.5rem;
-  line-height: 2.75; }
+  line-height: 2.75rem; }
+
+img {
+  max-width: 100%; }
 
 header {
   background: #2a328f;
@@ -64,3 +67,70 @@ header {
         transition: transform 0.6s ease; }
         header .social-media a .iconMedia:hover {
           transform: scale(1); }
+
+.subheader {
+  height: 400px; }
+  .subheader .slider-show {
+    height: 100%;
+    width: 100%; }
+    .subheader .slider-show .slider {
+      height: 100%;
+      width: 100%; }
+      .subheader .slider-show .slider .slider-item {
+        height: 100%;
+        width: 100%;
+        background: url("./public/images/jpg/imgSubheader.jpg") no-repeat center;
+        background-size: 100% 100%;
+        padding-top: 40px; }
+        .subheader .slider-show .slider .slider-item h1 {
+          font-family: "Oswald", sans-serif;
+          font-weight: bold;
+          color: #0b1370;
+          text-transform: uppercase;
+          text-align: center;
+          position: relative; }
+          .subheader .slider-show .slider .slider-item h1::before {
+            content: "";
+            width: 35%;
+            left: 0;
+            height: 5px;
+            border-radius: 0 5px 5px 0;
+            background: #0b1370;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%; }
+          .subheader .slider-show .slider .slider-item h1::after {
+            content: "";
+            width: 35%;
+            right: 0;
+            height: 5px;
+            border-radius: 5px 0 0 5px;
+            background: #0b1370;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%; }
+        .subheader .slider-show .slider .slider-item p {
+          font-family: "Oxygen", sans-serif;
+          font-size: 1.25rem;
+          font-weight: normal;
+          color: #000000;
+          line-height: 1.5;
+          width: 560px;
+          margin: 20px auto 0;
+          text-align: center; }
+        .subheader .slider-show .slider .slider-item .btn {
+          font-family: "Anton", sans-serif;
+          font-size: 1.25rem;
+          font-weight: bold;
+          color: #0b1370;
+          line-height: normal;
+          margin: 20px auto 0;
+          transform: translateX(-50%);
+          left: 50%;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          display: inline-block;
+          border: 2px solid #0b1370;
+          border-radius: 5px;
+          padding: 10px 20px; }
