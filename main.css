@@ -310,3 +310,82 @@ header {
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     column-gap: 40px; }
+
+.support {
+  height: 50vh;
+  width: 100%;
+  background: url("./public/images/jpg/backSupport.jpg") no-repeat center;
+  background-size: 100% 100%;
+  padding-top: 40px; }
+  .support h2 {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: #0b1370;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative; }
+    .support h2::before {
+      content: "";
+      width: 40%;
+      left: 0;
+      height: 5px;
+      border-radius: 0 5px 5px 0;
+      background: #0b1370;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%; }
+    .support h2::after {
+      content: "";
+      width: 40%;
+      right: 0;
+      height: 5px;
+      border-radius: 5px 0 0 5px;
+      background: #0b1370;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%; }
+  .support .box-support {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 80px;
+    margin-top: 40px; }
+    .support .box-support .card {
+      width: 280px;
+      height: 280px;
+      border: 5px solid #fff;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      background: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      transition: all 0.8s ease;
+      padding: 0 15px; }
+      .support .box-support .card span {
+        font-family: "Oswald", sans-serif;
+        font-weight: bold;
+        color: #0b1370;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+        text-transform: uppercase; }
+      .support .box-support .card p {
+        display: none; }
+      .support .box-support .card:hover {
+        background: rgba(11, 19, 112, 0.7);
+        border-color: #0b1370; }
+        .support .box-support .card:hover svg {
+          display: none; }
+        .support .box-support .card:hover span {
+          color: #fff; }
+        .support .box-support .card:hover p {
+          font-family: "Oxygen", sans-serif;
+          font-size: 1rem;
+          font-weight: bold;
+          color: #fff;
+          line-height: 1.5rem;
+          display: inline;
+          width: fit-content;
+          text-align: center; }
