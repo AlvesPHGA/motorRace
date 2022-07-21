@@ -35,29 +35,123 @@
 
     .slider-motos {
       width: 100%;
-      height: 40vh;
+      height: 300px;
+      overflow-x: auto;
+      margin-block: 40px;
+      position: relative;
 
       .slider {
         height: 100%;
-        width: 250vw;
+        width: 190%;
         display: flex;
         align-items: center;
-        gap: 40px;
-        justify-content: end;
-
-        border: 1px solid red;
+        gap: 20px;
+        justify-content: center;
+        overflow: hidden;
 
         .slider-item {
-          width: 260px;
+          width: 200px;
           height: 200px;
+          cursor: pointer;
+          transition: box-shadow 0.7s ease;
 
           img {
             width: 100%;
             height: 100%;
             object-fit: fill;
           }
+
+          &:hover {
+            box-shadow: -2px -2px 4px 4px rgba($color: $carmine, $alpha: 0.25),
+              2px 2px 4px 2px rgba($color: $carmine, $alpha: 0.25);
+          }
         }
       }
+
+      .btn-prev-next {
+        .prev,
+        .next {
+          display: flex;
+          height: fit-content;
+          width: fit-content;
+          padding: 5rem 2.5rem;
+          background: rgba($color: $amaranth, $alpha: 0.15);
+          border-radius: 5px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 10;
+          cursor: pointer;
+          transition: background-color 0.7s ease;
+
+          &:hover {
+            background-color: rgba($color: $amaranth, $alpha: 0.5);
+
+            svg path {
+              transition: 0.7s ease;
+              stroke: rgba($color: $carmine, $alpha: 1);
+            }
+          }
+
+          svg {
+            path {
+              stroke: rgba($color: $carmine, $alpha: 0.5);
+            }
+          }
+        }
+
+        .prev {
+          left: 2%;
+        }
+
+        .next {
+          right: 2%;
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  .brands {
+    h3 {
+      @include linkNav_titles($f_weight: bold, $color: $dark_imperial_blue);
+      text-transform: uppercase;
+      text-align: center;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 25%;
+        left: 15%;
+        height: 5px;
+        border-radius: 5px;
+        background: $dark_imperial_blue;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+      }
+
+      &::after {
+        content: "";
+        width: 25%;
+        right: 15%;
+        height: 5px;
+        border-radius: 5px;
+        background: $dark_imperial_blue;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+      }
+    }
+
+    .box-brands {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      column-gap: 40px;
     }
   }
 }

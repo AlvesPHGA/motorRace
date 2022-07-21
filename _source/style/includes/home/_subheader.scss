@@ -76,6 +76,13 @@
           border: 2px solid $dark_imperial_blue;
           border-radius: 5px;
           padding: 10px 20px;
+          transition: all 0.7s ease;
+
+          &:hover {
+            border-color: $white;
+            color: $white;
+            background-color: $dark_imperial_blue;
+          }
         }
       }
     }

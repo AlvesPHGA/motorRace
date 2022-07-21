@@ -136,7 +136,12 @@ header {
           display: inline-block;
           border: 2px solid #0b1370;
           border-radius: 5px;
-          padding: 10px 20px; }
+          padding: 10px 20px;
+          transition: all 0.7s ease; }
+          .subheader .slider-show .slider .slider-item .btn:hover {
+            border-color: #fff;
+            color: #fff;
+            background-color: #0b1370; }
 
 .about-us {
   height: 70vh;
@@ -219,19 +224,89 @@ header {
       top: 50%; }
   .motos-brands .motos .slider-motos {
     width: 100%;
-    height: 40vh; }
+    height: 300px;
+    overflow-x: auto;
+    margin-block: 40px;
+    position: relative; }
     .motos-brands .motos .slider-motos .slider {
       height: 100%;
-      width: 250vw;
+      width: 190%;
       display: flex;
       align-items: center;
-      gap: 40px;
-      justify-content: end;
-      border: 1px solid red; }
+      gap: 20px;
+      justify-content: center;
+      overflow: hidden; }
       .motos-brands .motos .slider-motos .slider .slider-item {
-        width: 260px;
-        height: 200px; }
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+        transition: box-shadow 0.7s ease; }
         .motos-brands .motos .slider-motos .slider .slider-item img {
           width: 100%;
           height: 100%;
           object-fit: fill; }
+        .motos-brands .motos .slider-motos .slider .slider-item:hover {
+          box-shadow: -2px -2px 4px 4px rgba(160, 0, 16, 0.25), 2px 2px 4px 2px rgba(160, 0, 16, 0.25); }
+    .motos-brands .motos .slider-motos .btn-prev-next .prev,
+    .motos-brands .motos .slider-motos .btn-prev-next .next {
+      display: flex;
+      height: fit-content;
+      width: fit-content;
+      padding: 5rem 2.5rem;
+      background: rgba(223, 50, 79, 0.15);
+      border-radius: 5px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      cursor: pointer;
+      transition: background-color 0.7s ease; }
+      .motos-brands .motos .slider-motos .btn-prev-next .prev:hover,
+      .motos-brands .motos .slider-motos .btn-prev-next .next:hover {
+        background-color: rgba(223, 50, 79, 0.5); }
+        .motos-brands .motos .slider-motos .btn-prev-next .prev:hover svg path,
+        .motos-brands .motos .slider-motos .btn-prev-next .next:hover svg path {
+          transition: 0.7s ease;
+          stroke: #a00010; }
+      .motos-brands .motos .slider-motos .btn-prev-next .prev svg path,
+      .motos-brands .motos .slider-motos .btn-prev-next .next svg path {
+        stroke: rgba(160, 0, 16, 0.5); }
+    .motos-brands .motos .slider-motos .btn-prev-next .prev {
+      left: 2%; }
+    .motos-brands .motos .slider-motos .btn-prev-next .next {
+      right: 2%; }
+      .motos-brands .motos .slider-motos .btn-prev-next .next svg {
+        transform: rotate(180deg); }
+  .motos-brands .brands h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: #0b1370;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative; }
+    .motos-brands .brands h3::before {
+      content: "";
+      width: 25%;
+      left: 15%;
+      height: 5px;
+      border-radius: 5px;
+      background: #0b1370;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%; }
+    .motos-brands .brands h3::after {
+      content: "";
+      width: 25%;
+      right: 15%;
+      height: 5px;
+      border-radius: 5px;
+      background: #0b1370;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%; }
+  .motos-brands .brands .box-brands {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    column-gap: 40px; }
