@@ -99,6 +99,8 @@
         text-transform: uppercase;
         padding: 10px 20px;
         margin-left: auto;
+        cursor: pointer;
+        transition: all 0.7s ease;
 
         @include btn_link(
           $f_size: 1.25rem,
@@ -106,6 +108,11 @@
           $color: $white,
           $l_height: normal
         );
+
+        &:hover {
+          background-color: $white;
+          color: $cosmic_cobalt;
+        }
       }
     }
 

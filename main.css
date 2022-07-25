@@ -471,11 +471,16 @@ header {
         text-transform: uppercase;
         padding: 10px 20px;
         margin-left: auto;
+        cursor: pointer;
+        transition: all 0.7s ease;
         font-family: "Anton", sans-serif;
         font-size: 1.25rem;
         font-weight: bold;
         color: #fff;
         line-height: normal; }
+        .contact .__wrap form button:hover {
+          background-color: #fff;
+          color: #2a328f; }
     .contact .__wrap .info-social {
       background: rgba(11, 19, 112, 0.6);
       padding: 20px;
