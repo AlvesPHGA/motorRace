@@ -1,0 +1,164 @@
+.contact {
+  // background: $dark_imperial_blue;
+  padding: 100px 0 80px;
+  position: relative;
+
+  background: $dark_imperial_blue;
+
+  h2 {
+    @include linkNav_titles($f_weight: bold, $color: $white);
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 60px;
+
+    &::before {
+      content: "";
+      width: 40%;
+      left: 0;
+      height: 5px;
+      border-radius: 0 5px 5px 0;
+      background: $white;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+    }
+
+    &::after {
+      content: "";
+      width: 40%;
+      right: 0;
+      height: 5px;
+      border-radius: 5px 0 0 5px;
+      background: $white;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+    }
+  }
+
+  .back-img {
+    background: url(./public/images/jpg/contact.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+    width: 1000px;
+    height: 880px;
+    right: 0;
+    bottom: 53px;
+    background-size: 100% 100%;
+    opacity: 0.7;
+    border-radius: 5px;
+  }
+
+  .__wrap {
+    display: flex;
+    justify-content: space-between;
+
+    form {
+      background: $cosmic_cobalt;
+      border-radius: 5px;
+      padding: 40px;
+
+      legend {
+        @include text(
+          $f_size: 1.25rem,
+          $f_weight: bold,
+          $color: $white,
+          $l_height: 1.5
+        );
+        margin-bottom: 8px;
+      }
+
+      input,
+      textarea {
+        width: 30rem;
+        background: $snow;
+        border-radius: 5px;
+        padding: 5px 10px;
+        border: none;
+        margin-bottom: 20px;
+      }
+
+      input {
+        height: 3.125rem;
+      }
+
+      textarea {
+        height: 12.5rem;
+        resize: none;
+      }
+
+      button {
+        display: block;
+        border: 2px solid $white;
+        border-radius: 5px;
+        background: transparent;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        margin-left: auto;
+
+        @include btn_link(
+          $f_size: 1.25rem,
+          $f_weight: bold,
+          $color: $white,
+          $l_height: normal
+        );
+      }
+    }
+
+    .info-social {
+      background: rgba($color: $dark_imperial_blue, $alpha: 0.6);
+      padding: 20px;
+      border-radius: 5px;
+      height: fit-content;
+      margin-top: 40px;
+
+      .infos {
+        span {
+          @include text(
+            $f_size: 1.875rem,
+            $f_weight: bold,
+            $color: $white,
+            $l_height: 2.0625rem
+          );
+          display: block;
+          margin-bottom: 15px;
+        }
+
+        .phone,
+        .whats,
+        .email {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+
+        .phone::before {
+          content: url("./public/images/icons/phone.svg");
+        }
+
+        .whats::before {
+          content: url("./public/images/icons/smartphone.svg");
+        }
+
+        .email::before {
+          content: url("./public/images/icons/mail.svg");
+        }
+
+        .address {
+          display: flex;
+          width: 340px;
+          margin-bottom: 0;
+          gap: 12px;
+
+          &::before {
+            content: url("./public/images/icons/location.svg");
+          }
+        }
+      }
+    }
+  }
+}

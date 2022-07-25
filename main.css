@@ -312,7 +312,7 @@ header {
     column-gap: 40px; }
 
 .support {
-  height: 50vh;
+  height: 500px;
   width: 100%;
   background: url("./public/images/jpg/backSupport.jpg") no-repeat center;
   background-size: 100% 100%;
@@ -389,3 +389,123 @@ header {
           display: inline;
           width: fit-content;
           text-align: center; }
+
+.contact {
+  padding: 100px 0 80px;
+  position: relative;
+  background: #0b1370; }
+  .contact h2 {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 60px; }
+    .contact h2::before {
+      content: "";
+      width: 40%;
+      left: 0;
+      height: 5px;
+      border-radius: 0 5px 5px 0;
+      background: #fff;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%; }
+    .contact h2::after {
+      content: "";
+      width: 40%;
+      right: 0;
+      height: 5px;
+      border-radius: 5px 0 0 5px;
+      background: #fff;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%; }
+  .contact .back-img {
+    background: url(./public/images/jpg/contact.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+    width: 1000px;
+    height: 880px;
+    right: 0;
+    bottom: 53px;
+    background-size: 100% 100%;
+    opacity: 0.7;
+    border-radius: 5px; }
+  .contact .__wrap {
+    display: flex;
+    justify-content: space-between; }
+    .contact .__wrap form {
+      background: #2a328f;
+      border-radius: 5px;
+      padding: 40px; }
+      .contact .__wrap form legend {
+        font-family: "Oxygen", sans-serif;
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #fff;
+        line-height: 1.5;
+        margin-bottom: 8px; }
+      .contact .__wrap form input,
+      .contact .__wrap form textarea {
+        width: 30rem;
+        background: #fefbfb;
+        border-radius: 5px;
+        padding: 5px 10px;
+        border: none;
+        margin-bottom: 20px; }
+      .contact .__wrap form input {
+        height: 3.125rem; }
+      .contact .__wrap form textarea {
+        height: 12.5rem;
+        resize: none; }
+      .contact .__wrap form button {
+        display: block;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        background: transparent;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        margin-left: auto;
+        font-family: "Anton", sans-serif;
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #fff;
+        line-height: normal; }
+    .contact .__wrap .info-social {
+      background: rgba(11, 19, 112, 0.6);
+      padding: 20px;
+      border-radius: 5px;
+      height: fit-content;
+      margin-top: 40px; }
+      .contact .__wrap .info-social .infos span {
+        font-family: "Oxygen", sans-serif;
+        font-size: 1.875rem;
+        font-weight: bold;
+        color: #fff;
+        line-height: 2.0625rem;
+        display: block;
+        margin-bottom: 15px; }
+      .contact .__wrap .info-social .infos .phone,
+      .contact .__wrap .info-social .infos .whats,
+      .contact .__wrap .info-social .infos .email {
+        display: flex;
+        align-items: center;
+        gap: 12px; }
+      .contact .__wrap .info-social .infos .phone::before {
+        content: url("./public/images/icons/phone.svg"); }
+      .contact .__wrap .info-social .infos .whats::before {
+        content: url("./public/images/icons/smartphone.svg"); }
+      .contact .__wrap .info-social .infos .email::before {
+        content: url("./public/images/icons/mail.svg"); }
+      .contact .__wrap .info-social .infos .address {
+        display: flex;
+        width: 340px;
+        margin-bottom: 0;
+        gap: 12px; }
+        .contact .__wrap .info-social .infos .address::before {
+          content: url("./public/images/icons/location.svg"); }
