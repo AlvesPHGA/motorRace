@@ -509,8 +509,93 @@ header {
         gap: 12px; }
         .contact .__wrap .info-social .infos .address::before {
           content: url("./public/images/icons/location.svg"); }
+      .contact .__wrap .info-social .social-media {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        margin-top: 20px;
+        justify-content: center; }
+        .contact .__wrap .info-social .social-media a {
+          cursor: pointer;
+          display: contents; }
+          .contact .__wrap .info-social .social-media a .iconMedia {
+            transition: transform 0.6s ease;
+            width: 50px; }
+            .contact .__wrap .info-social .social-media a .iconMedia:hover {
+              transform: scale(1.2); }
 
 .map {
   height: 400px; }
   .map img {
     object-fit: cover; }
+
+footer {
+  padding: 40px 0;
+  background: #2a328f; }
+  footer .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #1b2380;
+    padding-bottom: 40px; }
+    footer .top .info-social .infos span {
+      font-family: "Oxygen", sans-serif;
+      font-size: 1.125rem;
+      font-weight: bold;
+      color: #fff;
+      line-height: normal;
+      display: block;
+      margin-bottom: 15px; }
+    footer .top .info-social .infos .phone,
+    footer .top .info-social .infos .whats,
+    footer .top .info-social .infos .email {
+      display: flex;
+      align-items: center;
+      gap: 12px; }
+    footer .top .info-social .infos .phone::before {
+      content: url("./public/images/icons/phone.svg"); }
+    footer .top .info-social .infos .whats::before {
+      content: url("./public/images/icons/smartphone.svg"); }
+    footer .top .info-social .infos .email::before {
+      content: url("./public/images/icons/mail.svg"); }
+    footer .top .info-social .infos .address {
+      display: flex;
+      width: 280px;
+      margin-bottom: 0;
+      gap: 12px; }
+      footer .top .info-social .infos .address::before {
+        content: url("./public/images/icons/location.svg"); }
+    footer .top .info-social .social-media {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      margin-top: 20px;
+      justify-content: center; }
+      footer .top .info-social .social-media a {
+        cursor: pointer;
+        display: contents; }
+        footer .top .info-social .social-media a .iconMedia {
+          transform: scale(0.9);
+          transition: transform 0.6s ease; }
+          footer .top .info-social .social-media a .iconMedia:hover {
+            transform: scale(1); }
+    footer .top .nav-footer a {
+      font-family: "Oswald", sans-serif;
+      font-weight: bold;
+      color: #fff;
+      font-size: 1.5rem;
+      line-height: normal;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+      position: relative;
+      display: block; }
+      footer .top .nav-footer a:nth-child(4) {
+        margin-bottom: 0; }
+  footer p {
+    font-family: "Oxygen", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #535bb8;
+    line-height: normal;
+    text-align: center;
+    margin-top: 40px; }
