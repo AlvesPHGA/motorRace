@@ -509,3 +509,8 @@ header {
         gap: 12px; }
         .contact .__wrap .info-social .infos .address::before {
           content: url("./public/images/icons/location.svg"); }
+
+.map {
+  height: 400px; }
+  .map img {
+    object-fit: cover; }
