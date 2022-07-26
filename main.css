@@ -157,6 +157,9 @@ header {
 
 .subheader {
   height: 400px; }
+  @media (max-width: 320px) {
+    .subheader {
+      height: fit-content; } }
   .subheader .slider-show {
     height: 100%;
     width: 100%; }
@@ -169,6 +172,10 @@ header {
         background: url("./public/images/jpg/imgSubheader.jpg") no-repeat center;
         background-size: 100% 100%;
         padding-top: 40px; }
+        @media (max-width: 320px) {
+          .subheader .slider-show .slider .slider-item {
+            padding: 20px 0;
+            background: url("./public/images/jpg/imgSubheader-mobile.jpg") no-repeat; } }
         .subheader .slider-show .slider .slider-item h1 {
           font-family: "Oswald", sans-serif;
           font-weight: bold;
@@ -186,6 +193,10 @@ header {
             position: absolute;
             transform: translateY(-50%);
             top: 50%; }
+            @media (max-width: 320px) {
+              .subheader .slider-show .slider .slider-item h1::before {
+                width: 20%;
+                height: 3px; } }
           .subheader .slider-show .slider .slider-item h1::after {
             content: "";
             width: 35%;
@@ -196,6 +207,10 @@ header {
             position: absolute;
             transform: translateY(-50%);
             top: 50%; }
+            @media (max-width: 320px) {
+              .subheader .slider-show .slider .slider-item h1::after {
+                width: 20%;
+                height: 3px; } }
         .subheader .slider-show .slider .slider-item p {
           font-family: "Oxygen", sans-serif;
           font-size: 1.25rem;
@@ -205,6 +220,11 @@ header {
           width: 560px;
           margin: 20px auto 0;
           text-align: center; }
+          @media (max-width: 320px) {
+            .subheader .slider-show .slider .slider-item p {
+              font-size: 1rem;
+              line-height: 1.5rem;
+              width: 100%; } }
         .subheader .slider-show .slider .slider-item .btn {
           font-family: "Anton", sans-serif;
           font-size: 1.25rem;
@@ -222,6 +242,9 @@ header {
           border-radius: 5px;
           padding: 10px 20px;
           transition: all 0.7s ease; }
+          @media (max-width: 320px) {
+            .subheader .slider-show .slider .slider-item .btn {
+              font-size: 1.125rem; } }
           .subheader .slider-show .slider .slider-item .btn:hover {
             border-color: #fff;
             color: #fff;
@@ -231,16 +254,26 @@ header {
   height: 70vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 320px) {
+    .about-us {
+      display: block;
+      height: fit-content; } }
   .about-us .img-back {
     background: url("./public/images/jpg/about.jpg") no-repeat center;
     background-size: 100% 100%;
     height: 100%; }
+    @media (max-width: 320px) {
+      .about-us .img-back {
+        display: none; } }
   .about-us .content {
     background: #2a328f;
     padding: 0 60px;
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    @media (max-width: 320px) {
+      .about-us .content {
+        padding: 20px 15px; } }
     .about-us .content h2 {
       font-family: "Oswald", sans-serif;
       font-weight: bold;
@@ -276,6 +309,13 @@ header {
       line-height: 1.68rem;
       width: 560px;
       margin: 20px auto 0; }
+      @media (max-width: 320px) {
+        .about-us .content p {
+          width: 100%;
+          margin: 0 auto;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          text-align: center; } }
 
 .motos-brands {
   padding-block: 100px; }
@@ -621,12 +661,18 @@ header {
 footer {
   padding: 40px 0;
   background: #2a328f; }
+  @media (max-width: 320px) {
+    footer {
+      padding: 20px 0; } }
   footer .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid #1b2380;
     padding-bottom: 40px; }
+    @media (max-width: 320px) {
+      footer .top {
+        flex-direction: column; } }
     footer .top .info-social .infos span {
       font-family: "Oxygen", sans-serif;
       font-size: 1.125rem;

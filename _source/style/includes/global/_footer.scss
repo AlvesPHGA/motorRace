@@ -2,12 +2,20 @@ footer {
   padding: 40px 0;
   background: $cosmic_cobalt;
 
+  @include mobile_s {
+    padding: 20px 0;
+  }
+
   .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid $st_patrick_blue;
     padding-bottom: 40px;
+
+    @include mobile_s {
+      flex-direction: column;
+    }
 
     .info-social {
       .infos {
