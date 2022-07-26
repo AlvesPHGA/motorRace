@@ -4,13 +4,31 @@ header {
   display: flex;
   align-items: center;
 
+  @include mobile_s {
+    height: 100px;
+  }
+
   .__wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
+  .navegation {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+
+    @include mobile_s {
+      display: none;
+    }
+  }
+
   nav {
+    position: relative;
+    left: -50%;
+    transform: translateX(50%);
+
     a {
       @include linkNav_titles($color: $white, $f_weight: bold);
       font-size: 1.5rem;

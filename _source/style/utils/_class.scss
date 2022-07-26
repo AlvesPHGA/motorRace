@@ -2,4 +2,9 @@
   margin: 0 auto;
   position: relative;
   width: 1200px;
+
+  @include mobile_s {
+    width: 100%;
+    padding: 0 15px;
+  }
 }
