@@ -273,7 +273,7 @@ header {
     justify-content: center; }
     @media (max-width: 320px) {
       .about-us .content {
-        padding: 20px 15px; } }
+        padding: 20px 0; } }
     .about-us .content h2 {
       font-family: "Oswald", sans-serif;
       font-weight: bold;
@@ -291,6 +291,12 @@ header {
         left: 5%;
         transform: translateY(-50%);
         top: 50%; }
+        @media (max-width: 320px) {
+          .about-us .content h2::before {
+            width: 20%;
+            left: 0;
+            border-radius: 0 5px 5px 0;
+            height: 3px; } }
       .about-us .content h2::after {
         content: "";
         width: 100px;
@@ -301,6 +307,12 @@ header {
         right: 5%;
         transform: translateY(-50%);
         top: 50%; }
+        @media (max-width: 320px) {
+          .about-us .content h2::after {
+            width: 20%;
+            right: 0;
+            border-radius: 5px 0 0 5px;
+            height: 3px; } }
     .about-us .content p {
       font-family: "Oxygen", sans-serif;
       font-size: 1.125rem;
@@ -312,10 +324,11 @@ header {
       @media (max-width: 320px) {
         .about-us .content p {
           width: 100%;
-          margin: 0 auto;
+          margin: 20px auto 0;
           font-size: 1rem;
           line-height: 1.5rem;
-          text-align: center; } }
+          text-align: center;
+          padding: 0 15px; } }
 
 .motos-brands {
   padding-block: 100px; }

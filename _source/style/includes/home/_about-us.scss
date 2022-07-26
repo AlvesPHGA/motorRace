@@ -26,7 +26,7 @@
     justify-content: center;
 
     @include mobile_s {
-      padding: 20px 15px;
+      padding: 20px 0;
     }
 
     h2 {
@@ -45,6 +45,13 @@
         left: 5%;
         transform: translateY(-50%);
         top: 50%;
+
+        @include mobile_s {
+          width: 20%;
+          left: 0;
+          border-radius: 0 5px 5px 0;
+          height: 3px;
+        }
       }
 
       &::after {
@@ -57,6 +64,13 @@
         right: 5%;
         transform: translateY(-50%);
         top: 50%;
+
+        @include mobile_s {
+          width: 20%;
+          right: 0;
+          border-radius: 5px 0 0 5px;
+          height: 3px;
+        }
       }
     }
 
@@ -73,10 +87,11 @@
 
       @include mobile_s {
         width: 100%;
-        margin: 0 auto;
+        margin: 20px auto 0;
         font-size: 1rem;
         line-height: 1.5rem;
         text-align: center;
+        padding: 0 15px;
       }
     }
   }
