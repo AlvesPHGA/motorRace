@@ -1,7 +1,15 @@
 .map {
   height: 400px;
 
+  @include mobile_s {
+    height: 40vh;
+  }
+
   img {
     object-fit: cover;
+
+    @include mobile_s {
+      height: 100%;
+    }
   }
 }

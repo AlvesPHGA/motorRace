@@ -804,8 +804,14 @@ header {
 
 .map {
   height: 400px; }
+  @media (max-width: 320px) {
+    .map {
+      height: 40vh; } }
   .map img {
     object-fit: cover; }
+    @media (max-width: 320px) {
+      .map img {
+        height: 100%; } }
 
 .__slider-brands {
   height: fit-content;
