@@ -653,6 +653,15 @@ header {
     background-size: 100% 100%;
     opacity: 0.7;
     border-radius: 5px; }
+    @media (max-width: 320px) {
+      .contact .back-img {
+        background: url("../../../../public/images/jpg/backContact-mobile.jpg") no-repeat;
+        width: 100%;
+        height: 500px;
+        bottom: 0;
+        background-size: cover;
+        opacity: 0.4;
+        border-radius: 0; } }
   .contact .__wrap {
     display: flex;
     justify-content: space-between; }
@@ -737,12 +746,27 @@ header {
         line-height: 2.0625rem;
         display: block;
         margin-bottom: 15px; }
+        @media (max-width: 320px) {
+          .contact .__wrap .info-social .infos span {
+            font-size: 1rem;
+            line-height: normal; } }
+      @media (max-width: 320px) {
+        .contact .__wrap .info-social .infos .numbers {
+          display: flex;
+          align-items: center;
+          justify-content: space-around; } }
       .contact .__wrap .info-social .infos .phone,
       .contact .__wrap .info-social .infos .whats,
       .contact .__wrap .info-social .infos .email {
         display: flex;
         align-items: center;
         gap: 12px; }
+        @media (max-width: 320px) {
+          .contact .__wrap .info-social .infos .phone,
+          .contact .__wrap .info-social .infos .whats,
+          .contact .__wrap .info-social .infos .email {
+            flex-direction: column;
+            gap: 8px; } }
       .contact .__wrap .info-social .infos .phone::before {
         content: url("./public/images/icons/phone.svg"); }
       .contact .__wrap .info-social .infos .whats::before {
@@ -754,6 +778,13 @@ header {
         width: 340px;
         margin-bottom: 0;
         gap: 12px; }
+        @media (max-width: 320px) {
+          .contact .__wrap .info-social .infos .address {
+            flex-direction: column;
+            align-items: center;
+            width: 220px;
+            text-align: center;
+            margin: auto; } }
         .contact .__wrap .info-social .infos .address::before {
           content: url("./public/images/icons/location.svg"); }
       .contact .__wrap .info-social .social-media {
