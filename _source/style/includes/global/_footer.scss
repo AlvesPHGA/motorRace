@@ -15,9 +15,13 @@ footer {
 
     @include mobile_s {
       flex-direction: column;
+      gap: 40px;
     }
 
     .info-social {
+      @include mobile_s {
+        display: none;
+      }
       .infos {
         span {
           @include text(

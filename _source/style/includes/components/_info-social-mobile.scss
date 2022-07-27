@@ -1,0 +1,84 @@
+.info-social-mobile {
+  display: none;
+
+  @include mobile_s {
+    display: block;
+    width: 100%;
+  }
+
+  span {
+    @include text(
+      $f_size: 1rem,
+      $f_weight: bold,
+      $color: $white,
+      $l_height: normal
+    );
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .numbers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .phone,
+  .whats,
+  .email {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .phone::before {
+    content: url("./public/images/icons/phone.svg");
+  }
+
+  .whats::before {
+    content: url("./public/images/icons/smartphone.svg");
+  }
+
+  .email::before {
+    content: url("./public/images/icons/mail.svg");
+  }
+
+  .address {
+    display: flex;
+    margin-bottom: 0;
+    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    text-align: center;
+    margin: auto;
+
+    &::before {
+      content: url("./public/images/icons/location.svg");
+    }
+  }
+
+  .social-media {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+
+    a {
+      cursor: pointer;
+      display: contents;
+
+      .iconMedia {
+        // transform: scale(0.9);
+        transition: transform 0.6s ease;
+        width: 50px;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
