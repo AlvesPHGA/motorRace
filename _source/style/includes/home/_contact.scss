@@ -1,9 +1,11 @@
 .contact {
-  // background: $dark_imperial_blue;
   padding: 100px 0 80px;
   position: relative;
-
   background: $dark_imperial_blue;
+
+  @include mobile_s {
+    padding: 20px 0;
+  }
 
   h2 {
     @include linkNav_titles($f_weight: bold, $color: $white);
@@ -12,6 +14,10 @@
     position: relative;
     z-index: 1;
     margin-bottom: 60px;
+
+    @include mobile_s {
+      margin-bottom: 20px;
+    }
 
     &::before {
       content: "";
@@ -23,6 +29,11 @@
       position: absolute;
       transform: translateY(-50%);
       top: 50%;
+
+      @include mobile_s {
+        width: 20%;
+        height: 3px;
+      }
     }
 
     &::after {
@@ -35,6 +46,11 @@
       position: absolute;
       transform: translateY(-50%);
       top: 50%;
+
+      @include mobile_s {
+        width: 20%;
+        height: 3px;
+      }
     }
   }
 
@@ -56,10 +72,18 @@
     display: flex;
     justify-content: space-between;
 
+    @include mobile_s {
+      flex-direction: column;
+    }
+
     form {
       background: $cosmic_cobalt;
       border-radius: 5px;
       padding: 40px;
+
+      @include mobile_s {
+        padding: 10px;
+      }
 
       legend {
         @include text(
@@ -69,6 +93,11 @@
           $l_height: 1.5
         );
         margin-bottom: 8px;
+
+        @include mobile_s {
+          font-size: 1rem;
+          margin-bottom: 4px;
+        }
       }
 
       input,
@@ -79,15 +108,28 @@
         padding: 5px 10px;
         border: none;
         margin-bottom: 20px;
+
+        @include mobile_s {
+          width: 100%;
+          margin-bottom: 10px;
+        }
       }
 
       input {
         height: 3.125rem;
+
+        @include mobile_s {
+          height: 2.5rem;
+        }
       }
 
       textarea {
         height: 12.5rem;
         resize: none;
+
+        @include mobile_s {
+          height: 9.375rem;
+        }
       }
 
       button {
@@ -108,6 +150,10 @@
           $color: $white,
           $l_height: normal
         );
+
+        @include mobile_s {
+          width: 100%;
+        }
 
         &:hover {
           background-color: $white;

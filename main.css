@@ -598,6 +598,9 @@ header {
   padding: 100px 0 80px;
   position: relative;
   background: #0b1370; }
+  @media (max-width: 320px) {
+    .contact {
+      padding: 20px 0; } }
   .contact h2 {
     font-family: "Oswald", sans-serif;
     font-weight: bold;
@@ -607,6 +610,9 @@ header {
     position: relative;
     z-index: 1;
     margin-bottom: 60px; }
+    @media (max-width: 320px) {
+      .contact h2 {
+        margin-bottom: 20px; } }
     .contact h2::before {
       content: "";
       width: 40%;
@@ -617,6 +623,10 @@ header {
       position: absolute;
       transform: translateY(-50%);
       top: 50%; }
+      @media (max-width: 320px) {
+        .contact h2::before {
+          width: 20%;
+          height: 3px; } }
     .contact h2::after {
       content: "";
       width: 40%;
@@ -627,6 +637,10 @@ header {
       position: absolute;
       transform: translateY(-50%);
       top: 50%; }
+      @media (max-width: 320px) {
+        .contact h2::after {
+          width: 20%;
+          height: 3px; } }
   .contact .back-img {
     background: url(./public/images/jpg/contact.jpg) no-repeat;
     background-size: cover;
@@ -642,10 +656,16 @@ header {
   .contact .__wrap {
     display: flex;
     justify-content: space-between; }
+    @media (max-width: 320px) {
+      .contact .__wrap {
+        flex-direction: column; } }
     .contact .__wrap form {
       background: #2a328f;
       border-radius: 5px;
       padding: 40px; }
+      @media (max-width: 320px) {
+        .contact .__wrap form {
+          padding: 10px; } }
       .contact .__wrap form legend {
         font-family: "Oxygen", sans-serif;
         font-size: 1.25rem;
@@ -653,6 +673,10 @@ header {
         color: #fff;
         line-height: 1.5;
         margin-bottom: 8px; }
+        @media (max-width: 320px) {
+          .contact .__wrap form legend {
+            font-size: 1rem;
+            margin-bottom: 4px; } }
       .contact .__wrap form input,
       .contact .__wrap form textarea {
         width: 30rem;
@@ -661,11 +685,22 @@ header {
         padding: 5px 10px;
         border: none;
         margin-bottom: 20px; }
+        @media (max-width: 320px) {
+          .contact .__wrap form input,
+          .contact .__wrap form textarea {
+            width: 100%;
+            margin-bottom: 10px; } }
       .contact .__wrap form input {
         height: 3.125rem; }
+        @media (max-width: 320px) {
+          .contact .__wrap form input {
+            height: 2.5rem; } }
       .contact .__wrap form textarea {
         height: 12.5rem;
         resize: none; }
+        @media (max-width: 320px) {
+          .contact .__wrap form textarea {
+            height: 9.375rem; } }
       .contact .__wrap form button {
         display: block;
         border: 2px solid #fff;
@@ -682,6 +717,9 @@ header {
         font-weight: bold;
         color: #fff;
         line-height: normal; }
+        @media (max-width: 320px) {
+          .contact .__wrap form button {
+            width: 100%; } }
         .contact .__wrap form button:hover {
           background-color: #fff;
           color: #2a328f; }
