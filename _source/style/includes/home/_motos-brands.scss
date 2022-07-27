@@ -1,6 +1,10 @@
 .motos-brands {
   padding-block: 100px;
 
+  @include mobile_s {
+    padding-block: 40px;
+  }
+
   .motos {
     h2 {
       @include linkNav_titles($f_weight: bold, $color: $dark_imperial_blue);
@@ -18,6 +22,11 @@
         position: absolute;
         transform: translateY(-50%);
         top: 50%;
+
+        @include mobile_s {
+          width: 30%;
+          height: 3px;
+        }
       }
 
       &::after {
@@ -30,6 +39,11 @@
         position: absolute;
         transform: translateY(-50%);
         top: 50%;
+
+        @include mobile_s {
+          width: 30%;
+          height: 3px;
+        }
       }
     }
 
@@ -40,6 +54,11 @@
       margin-block: 40px;
       position: relative;
 
+      @include mobile_s {
+        height: 200px;
+        margin-block: 20px;
+      }
+
       .slider {
         height: 100%;
         width: 190%;
@@ -49,16 +68,30 @@
         justify-content: center;
         overflow: hidden;
 
+        @include mobile_s {
+          width: 650%;
+        }
+
         .slider-item {
           width: 200px;
           height: 200px;
           cursor: pointer;
           transition: box-shadow 0.7s ease;
 
+          @include mobile_s {
+            height: 160px;
+            width: 170px;
+
+            &:hover {
+              box-shadow: none;
+            }
+          }
+
           img {
             width: 100%;
             height: 100%;
             object-fit: fill;
+            border-radius: 5px;
           }
 
           &:hover {
@@ -69,6 +102,9 @@
       }
 
       .btn-prev-next {
+        @include mobile_s {
+          display: none;
+        }
         .prev,
         .next {
           display: flex;
@@ -131,6 +167,12 @@
         position: absolute;
         transform: translateY(-50%);
         top: 50%;
+
+        @include mobile_s {
+          width: 30%;
+          height: 3px;
+          left: 0;
+        }
       }
 
       &::after {
@@ -143,6 +185,12 @@
         position: absolute;
         transform: translateY(-50%);
         top: 50%;
+
+        @include mobile_s {
+          width: 30%;
+          height: 3px;
+          right: 0;
+        }
       }
     }
 

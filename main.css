@@ -332,6 +332,9 @@ header {
 
 .motos-brands {
   padding-block: 100px; }
+  @media (max-width: 320px) {
+    .motos-brands {
+      padding-block: 40px; } }
   .motos-brands .motos h2 {
     font-family: "Oswald", sans-serif;
     font-weight: bold;
@@ -349,6 +352,10 @@ header {
       position: absolute;
       transform: translateY(-50%);
       top: 50%; }
+      @media (max-width: 320px) {
+        .motos-brands .motos h2::before {
+          width: 30%;
+          height: 3px; } }
     .motos-brands .motos h2::after {
       content: "";
       width: 40%;
@@ -359,12 +366,20 @@ header {
       position: absolute;
       transform: translateY(-50%);
       top: 50%; }
+      @media (max-width: 320px) {
+        .motos-brands .motos h2::after {
+          width: 30%;
+          height: 3px; } }
   .motos-brands .motos .slider-motos {
     width: 100%;
     height: 300px;
     overflow-x: auto;
     margin-block: 40px;
     position: relative; }
+    @media (max-width: 320px) {
+      .motos-brands .motos .slider-motos {
+        height: 200px;
+        margin-block: 20px; } }
     .motos-brands .motos .slider-motos .slider {
       height: 100%;
       width: 190%;
@@ -373,17 +388,30 @@ header {
       gap: 20px;
       justify-content: center;
       overflow: hidden; }
+      @media (max-width: 320px) {
+        .motos-brands .motos .slider-motos .slider {
+          width: 650%; } }
       .motos-brands .motos .slider-motos .slider .slider-item {
         width: 200px;
         height: 200px;
         cursor: pointer;
         transition: box-shadow 0.7s ease; }
+        @media (max-width: 320px) {
+          .motos-brands .motos .slider-motos .slider .slider-item {
+            height: 160px;
+            width: 170px; }
+            .motos-brands .motos .slider-motos .slider .slider-item:hover {
+              box-shadow: none; } }
         .motos-brands .motos .slider-motos .slider .slider-item img {
           width: 100%;
           height: 100%;
-          object-fit: fill; }
+          object-fit: fill;
+          border-radius: 5px; }
         .motos-brands .motos .slider-motos .slider .slider-item:hover {
           box-shadow: -2px -2px 4px 4px rgba(160, 0, 16, 0.25), 2px 2px 4px 2px rgba(160, 0, 16, 0.25); }
+    @media (max-width: 320px) {
+      .motos-brands .motos .slider-motos .btn-prev-next {
+        display: none; } }
     .motos-brands .motos .slider-motos .btn-prev-next .prev,
     .motos-brands .motos .slider-motos .btn-prev-next .next {
       display: flex;
@@ -431,6 +459,11 @@ header {
       position: absolute;
       transform: translateY(-50%);
       top: 50%; }
+      @media (max-width: 320px) {
+        .motos-brands .brands h3::before {
+          width: 30%;
+          height: 3px;
+          left: 0; } }
     .motos-brands .brands h3::after {
       content: "";
       width: 25%;
@@ -441,6 +474,11 @@ header {
       position: absolute;
       transform: translateY(-50%);
       top: 50%; }
+      @media (max-width: 320px) {
+        .motos-brands .brands h3::after {
+          width: 30%;
+          height: 3px;
+          right: 0; } }
   .motos-brands .brands .box-brands {
     margin-top: 40px;
     display: grid;
