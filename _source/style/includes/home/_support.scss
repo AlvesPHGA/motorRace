@@ -5,6 +5,13 @@
   background-size: 100% 100%;
   padding-top: 40px;
 
+  @include mobile_s {
+    background: url("./public/images/jpg/backSupport-mobile.jpg") no-repeat
+      center;
+    height: fit-content;
+    padding: 20px 0;
+  }
+
   h2 {
     @include linkNav_titles($f_weight: bold, $color: $dark_imperial_blue);
     text-transform: uppercase;
@@ -21,6 +28,11 @@
       position: absolute;
       transform: translateY(-50%);
       top: 50%;
+
+      @include mobile_s {
+        width: 30%;
+        height: 3px;
+      }
     }
 
     &::after {
@@ -33,6 +45,11 @@
       position: absolute;
       transform: translateY(-50%);
       top: 50%;
+
+      @include mobile_s {
+        width: 30%;
+        height: 3px;
+      }
     }
   }
 
@@ -42,6 +59,11 @@
     justify-content: center;
     column-gap: 80px;
     margin-top: 40px;
+
+    @include mobile_s {
+      gap: 20px;
+      margin-top: 20px;
+    }
 
     .card {
       width: 280px;
@@ -58,11 +80,21 @@
       transition: all 0.8s ease;
       padding: 0 15px;
 
+      @include mobile_s {
+        width: 100%;
+        gap: 20px;
+      }
+
       span {
         @include linkNav_titles($f_weight: bold, $color: $dark_imperial_blue);
         font-size: 1.25rem;
         line-height: 1.875rem;
         text-transform: uppercase;
+
+        @include mobile_s {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
       }
 
       p {
