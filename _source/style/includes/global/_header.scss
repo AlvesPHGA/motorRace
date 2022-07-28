@@ -9,6 +9,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
   }
 
   .__wrap {
@@ -23,7 +24,10 @@ header {
     width: 100%;
 
     @include mobile_s {
-      // display: none;
+      display: none;
+    }
+
+    &.__active-menu {
       display: flex;
       flex-direction: column;
       gap: 40px;
@@ -37,11 +41,6 @@ header {
       top: 100px;
       justify-content: space-around;
     }
-
-    // &.__active-menu {
-    //   display: flex;
-    //   flex-direction: column;
-    // }
   }
 
   nav {

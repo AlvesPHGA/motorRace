@@ -49,7 +49,8 @@ header {
       height: 100px;
       position: fixed;
       top: 0;
-      width: 100%; } }
+      width: 100%;
+      z-index: 100; } }
   header .__wrap {
     display: flex;
     align-items: center;
@@ -60,18 +61,20 @@ header {
     width: 100%; }
     @media (max-width: 320px) {
       header .navegation {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        position: fixed;
-        left: 0;
-        background: #2a328f;
-        width: 100%;
-        height: calc(100vh - 100px);
-        z-index: 100;
-        align-items: center;
-        top: 100px;
-        justify-content: space-around; } }
+        display: none; } }
+    header .navegation.__active-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      position: fixed;
+      left: 0;
+      background: #2a328f;
+      width: 100%;
+      height: calc(100vh - 100px);
+      z-index: 100;
+      align-items: center;
+      top: 100px;
+      justify-content: space-around; }
   header nav {
     position: relative;
     left: -50%;
@@ -184,7 +187,8 @@ header {
   height: 400px; }
   @media (max-width: 320px) {
     .subheader {
-      height: fit-content; } }
+      height: fit-content;
+      margin-top: 100px; } }
   .subheader .slider-show {
     height: 100%;
     width: 100%; }
