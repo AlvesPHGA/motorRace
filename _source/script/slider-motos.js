@@ -64,8 +64,48 @@ export default class SliderMotos {
     this.moveSlider = this.moveSlider.bind(this);
   }
 
+  //   configuration
+  sliderPosition(slide) {
+    const margin = (this.dtSlider.offsetWidth - slide.offsetWidth) / 2;
+    return -(slide.offsetLeft - margin);
+  }
+
+  sliderConfig() {
+    this.slideArray = [...this.sliderItems.children].map((el) => {
+      const position = el.offsetLeft;
+
+      return {
+        position,
+        el,
+      };
+    });
+
+    console.log(this.slideArray);
+  }
+
+  //   index
+  sliderIndexNav(index) {
+    const last = this.slideArray.length - 1;
+    this.index = {
+      prev: index ? index - 1 : undefined,
+      active: index,
+      next: index === last ? undefined : index + 1,
+    };
+  }
+
+  //   change slide item
+  changeSlider(index) {
+    const activeSlider = this.slideArray[index];
+
+    this.moveSlider(activeSlider.position);
+    this.sliderIndexNav(index);
+
+    this.distance.finalPosition = activeSlider.position;
+  }
+
   init() {
     this.bindEvent();
+    this.sliderConfig();
     this.addSliderEvents();
     return this;
   }
