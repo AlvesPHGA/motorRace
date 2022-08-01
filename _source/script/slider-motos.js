@@ -21,27 +21,40 @@ export default class SliderMotos {
   }
 
   onStart(ev) {
-    ev.preventDefault();
-    console.log("mousedown");
+    let moveType;
 
-    this.distance.startX = ev.clientX;
+    if (ev.type === "mousedown") {
+      ev.preventDefault();
+      this.distance.startX = ev.clientX;
+      moveType = "mousemove";
+    } else {
+      this.distance.startX = ev.changedTouches[0].clientX;
+      moveType = "touchmove";
+    }
 
-    this.dtSlider.addEventListener("mousemove", this.onMove);
+    this.dtSlider.addEventListener(moveType, this.onMove);
   }
 
   onMove(ev) {
-    const finalPosition = this.updatedPosition(ev.clientX);
+    const pointerPosition =
+      ev.type === "mousemove" ? ev.clientX : ev.changedTouches[0].clientX;
+
+    const finalPosition = this.updatedPosition(pointerPosition);
+
     this.moveSlider(finalPosition);
   }
 
   endMove(ev) {
-    this.dtSlider.removeEventListener("mousemove", this.onMove);
+    const moveType = ev.type === "mouseup" ? "mousemove" : "touchmove";
+    this.dtSlider.removeEventListener(moveType, this.onMove);
     this.distance.finalPosition = this.distance.movePosition;
   }
 
   addSliderEvents() {
     this.dtSlider.addEventListener("mousedown", this.onStart);
+    this.dtSlider.addEventListener("touchstart", this.onStart);
     this.dtSlider.addEventListener("mouseup", this.endMove);
+    this.dtSlider.addEventListener("touchend", this.endMove);
   }
 
   bindEvent() {
