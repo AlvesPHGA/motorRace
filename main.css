@@ -409,7 +409,7 @@ header {
       .motos-brands .motos .slider-motos {
         height: 200px;
         margin-block: 20px; } }
-    .motos-brands .motos .slider-motos .slider {
+    .motos-brands .motos .slider-motos .slider-items {
       height: 100%;
       width: 190%;
       display: flex;
@@ -418,26 +418,26 @@ header {
       justify-content: center;
       overflow: hidden; }
       @media (max-width: 320px) {
-        .motos-brands .motos .slider-motos .slider {
+        .motos-brands .motos .slider-motos .slider-items {
           width: 650%; } }
-      .motos-brands .motos .slider-motos .slider .slider-item {
+      .motos-brands .motos .slider-motos .slider-items .slider-item {
         width: 200px;
         height: 200px;
         cursor: pointer;
         transition: box-shadow 0.7s ease; }
         @media (max-width: 320px) {
-          .motos-brands .motos .slider-motos .slider .slider-item {
+          .motos-brands .motos .slider-motos .slider-items .slider-item {
             height: 160px;
             width: 170px; } }
-        .motos-brands .motos .slider-motos .slider .slider-item img {
+        .motos-brands .motos .slider-motos .slider-items .slider-item img {
           width: 100%;
           height: 100%;
           object-fit: fill;
           border-radius: 5px; }
-        .motos-brands .motos .slider-motos .slider .slider-item:hover {
+        .motos-brands .motos .slider-motos .slider-items .slider-item:hover {
           box-shadow: -2px -2px 4px 4px rgba(160, 0, 16, 0.25), 2px 2px 4px 2px rgba(160, 0, 16, 0.25); }
           @media (max-width: 320px) {
-            .motos-brands .motos .slider-motos .slider .slider-item:hover {
+            .motos-brands .motos .slider-motos .slider-items .slider-item:hover {
               box-shadow: none; } }
     @media (max-width: 320px) {
       .motos-brands .motos .slider-motos .btn-prev-next {
