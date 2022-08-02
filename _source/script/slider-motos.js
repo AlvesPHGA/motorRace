@@ -10,6 +10,10 @@ export default class SliderMotos {
     };
   }
 
+  transitionSlider(active) {
+    this.sliderItems.style.trasition = active ? "transform .3s" : "";
+  }
+
   moveSlider(distX) {
     this.distance.movePosition = distX;
     this.sliderItems.style.transform = `translate3d(${distX}px, 0, 0)`;
@@ -33,6 +37,8 @@ export default class SliderMotos {
     }
 
     this.dtSlider.addEventListener(moveType, this.onMove);
+
+    this.transitionSlider(false);
   }
 
   onMove(ev) {
@@ -48,6 +54,20 @@ export default class SliderMotos {
     const moveType = ev.type === "mouseup" ? "mousemove" : "touchmove";
     this.dtSlider.removeEventListener(moveType, this.onMove);
     this.distance.finalPosition = this.distance.movePosition;
+
+    this.transitionSlider(true);
+
+    this.changedSliderOnEnd();
+  }
+
+  changedSliderOnEnd() {
+    if (this.distance.movement > 120 && this.index.next !== undefined) {
+      this.activeNextSlider();
+    } else if (this.distance.movement < -120 && this.index.prev !== undefined) {
+      this.activePrevSlider();
+    } else {
+      this.changeSlider(this.index.active);
+    }
   }
 
   addSliderEvents() {
@@ -103,8 +123,18 @@ export default class SliderMotos {
     this.distance.finalPosition = activeSlider.position;
   }
 
+  // navegation
+  activePrevSlider() {
+    if (this.index.prev !== undefined) this.changeSlider(this.index.prev);
+  }
+
+  activeNextSlider() {
+    if (this.index.next !== undefined) this.changeSlider(this.index.next);
+  }
+
   init() {
     this.bindEvent();
+    this.transitionSlider(true);
     this.sliderConfig();
     this.addSliderEvents();
     return this;
