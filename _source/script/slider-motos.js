@@ -8,6 +8,8 @@ export default class SliderMotos {
       startX: 0,
       movement: 0,
     };
+
+    this.activeClass = "__active-item";
   }
 
   transitionSlider(active) {
@@ -77,13 +79,6 @@ export default class SliderMotos {
     this.dtSlider.addEventListener("touchend", this.endMove);
   }
 
-  bindEvent() {
-    this.onStart = this.onStart.bind(this);
-    this.onMove = this.onMove.bind(this);
-    this.endMove = this.endMove.bind(this);
-    this.moveSlider = this.moveSlider.bind(this);
-  }
-
   //   configuration
   sliderPosition(slide) {
     const margin = (this.dtSlider.offsetWidth - slide.offsetWidth) / 2;
@@ -121,6 +116,15 @@ export default class SliderMotos {
     this.sliderIndexNav(index);
 
     this.distance.finalPosition = activeSlider.position;
+
+    this.changedActiveClass();
+  }
+
+  changedActiveClass() {
+    this.slideArray.forEach((item) =>
+      item.el.classList.remove(this.activeClass)
+    );
+    this.slideArray[this.index.active].el.classList.add(this.activeClass);
   }
 
   // navegation
@@ -132,11 +136,31 @@ export default class SliderMotos {
     if (this.index.next !== undefined) this.changeSlider(this.index.next);
   }
 
+  onResize() {
+    setTimeout(() => {
+      this.sliderConfig();
+      this.changeSlider(this.index.active);
+    }, 1000);
+  }
+
+  addResizeEvent() {
+    window.addEventListener("resize", this.onResize);
+  }
+
+  bindEvent() {
+    this.onStart = this.onStart.bind(this);
+    this.onMove = this.onMove.bind(this);
+    this.endMove = this.endMove.bind(this);
+    this.moveSlider = this.moveSlider.bind(this);
+    this.addResizeEvent = this.addResizeEvent.bind(this);
+  }
+
   init() {
     this.bindEvent();
     this.transitionSlider(true);
     this.sliderConfig();
     this.addSliderEvents();
+    this.addResizeEvent();
     return this;
   }
 }
