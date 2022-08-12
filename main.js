@@ -1,7 +1,6 @@
-import SliderMotos from "./_source/script/slider-motos.js";
+import SliderNav from "./_source/script/slider-motos.js";
 
-const sliderMoto = new SliderMotos("[data-slider=motos]", ".slider-items");
+const sliderMoto = new SliderNav("[data-slider=motos]", ".slider-items");
 
 sliderMoto.init();
-
-console.log(sliderMoto);
+sliderMoto.addArrow("[data-slider=previous]", "[data-slider=next]");

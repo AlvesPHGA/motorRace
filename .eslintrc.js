@@ -12,5 +12,6 @@ module.exports = {
     "no-console": 0,
     "import/extensions": 0,
     camelcase: 0,
+    "max-classes-per-file": 0,
   },
 };

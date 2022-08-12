@@ -1,4 +1,4 @@
-export default class SliderMotos {
+export class SliderMotos {
   constructor(dt_slider, slider_items) {
     this.dtSlider = document.querySelector(dt_slider);
     this.sliderItems = document.querySelector(slider_items);
@@ -10,6 +10,11 @@ export default class SliderMotos {
     };
 
     this.activeClass = "__active-item";
+
+    this.left_and_right = {
+      left: 0,
+      right: 0,
+    };
   }
 
   transitionSlider(active) {
@@ -50,6 +55,7 @@ export default class SliderMotos {
     const finalPosition = this.updatedPosition(pointerPosition);
 
     this.moveSlider(finalPosition);
+    // this.leftMove(finalPosition);
   }
 
   endMove(ev) {
@@ -59,7 +65,14 @@ export default class SliderMotos {
 
     this.transitionSlider(true);
 
-    this.changedSliderOnEnd();
+    // this.changedSliderOnEnd();
+  }
+
+  leftMove(fPosition) {
+    const pos = fPosition;
+    if (pos) this.left_and_right.left -= 10;
+
+    this.sliderItems.style.transform = `translate3d(${this.left_and_right.left}px, 0, 0)`;
   }
 
   changedSliderOnEnd() {
@@ -94,8 +107,6 @@ export default class SliderMotos {
         el,
       };
     });
-
-    console.log(this.slideArray);
   }
 
   //   index
@@ -153,6 +164,7 @@ export default class SliderMotos {
     this.endMove = this.endMove.bind(this);
     this.moveSlider = this.moveSlider.bind(this);
     this.addResizeEvent = this.addResizeEvent.bind(this);
+    this.leftMove = this.leftMove.bind(this);
   }
 
   init() {
@@ -162,5 +174,14 @@ export default class SliderMotos {
     this.addSliderEvents();
     this.addResizeEvent();
     return this;
+  }
+}
+
+export default class SliderNav extends SliderMotos {
+  addArrow(previous, next) {
+    this.prevElement = document.querySelector(previous);
+    this.nextElement = document.querySelector(next);
+
+    this.prevElement.addEventListener("click", this.leftMove);
   }
 }
