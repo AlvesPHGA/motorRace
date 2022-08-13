@@ -102,6 +102,11 @@
       @include mobile_s {
         display: none;
       }
+
+      img {
+        width: 300px;
+        flex-shrink: 0;
+      }
     }
   }
 }
