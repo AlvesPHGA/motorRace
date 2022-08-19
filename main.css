@@ -191,13 +191,16 @@ header {
     width: 100%; }
     .subheader .slider-show .slider {
       height: 100%;
-      width: 100%; }
+      width: 100vw;
+      display: flex;
+      flex-flow: row nowrap; }
       .subheader .slider-show .slider .slider-item {
         height: 100%;
-        width: 100%;
+        width: 100vw;
         background: url("./public/images/jpg/imgSubheader.jpg") no-repeat center;
         background-size: 100% 100%;
-        padding-top: 40px; }
+        padding-top: 40px;
+        flex-shrink: 0; }
         @media (max-width: 320px) {
           .subheader .slider-show .slider .slider-item {
             padding: 20px 0;
