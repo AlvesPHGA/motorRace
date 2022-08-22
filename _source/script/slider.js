@@ -10,6 +10,11 @@ export default class Slider {
     };
   }
 
+  // utils
+  itemsTransition(active) {
+    this.slider.style.transition = active ? "transform .3s" : "";
+  }
+
   // move slider
   startSlider(ev) {
     let type_event;
@@ -20,6 +25,8 @@ export default class Slider {
     }
 
     this.dt_slider.addEventListener(type_event, this.onSliderMove);
+
+    this.itemsTransition(false);
   }
 
   onSliderMove(ev) {
@@ -37,11 +44,31 @@ export default class Slider {
     this.dt_slider.removeEventListener(move_type, this.onSliderMove);
 
     this.position.last = this.position.new;
+
+    this.itemsTransition(true);
+
+    this.changeItemOffSliderMove();
   }
 
   moveSlider(distX) {
     this.position.new = distX;
     this.slider.style.transform = `translate3d(${distX}px, 0, 0)`;
+  }
+
+  changeItemOffSliderMove() {
+    if (
+      this.position.movement > this.dt_slider.offsetWidth / 2 &&
+      this.index_item.next !== undefined
+    ) {
+      this.activeNextItem();
+    } else if (
+      this.position.movement < this.dt_slider.offsetWidth / 2 &&
+      this.index_item.prev !== undefined
+    ) {
+      this.activePreviousItem();
+    } else {
+      this.changeItemSlider(this.index_item.active);
+    }
   }
 
   // position
@@ -89,6 +116,17 @@ export default class Slider {
     };
   }
 
+  // previous & next
+  activePreviousItem() {
+    if (this.index_item.prev !== undefined)
+      this.changeItemSlider(this.index_item.prev);
+  }
+
+  activeNextItem() {
+    if (this.index_item.next !== undefined)
+      this.changeItemSlider(this.index_item.next);
+  }
+
   //   setup of class
   eventsListener() {
     this.dt_slider.addEventListener("mousedown", this.startSlider);
@@ -104,6 +142,7 @@ export default class Slider {
 
   init() {
     this.eventBind();
+    this.itemsTransition(true);
     this.eventsListener();
     this.itemOfSliderConfig();
     return this;
