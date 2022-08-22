@@ -50,6 +50,45 @@ export default class Slider {
     return this.position.last - this.position.movement;
   }
 
+  // config item of slider
+  itemOfSliderConfig() {
+    this.items_array = [...this.slider.children].map((item) => {
+      const position_item = this.itemOfSliderPosition(item);
+
+      return {
+        position_item,
+        item,
+      };
+    });
+
+    console.log(this.items_array);
+  }
+
+  itemOfSliderPosition(item) {
+    const field_margin = this.slider.offsetWidth - item.offsetWidth;
+
+    return -(item.offsetLeft - field_margin);
+  }
+
+  changeItemSlider(index) {
+    const active_item = this.items_array[index];
+
+    this.itemIndexOfSlider(index);
+    this.moveSlider(active_item.position_item);
+
+    this.position.last = active_item.position_item;
+  }
+
+  itemIndexOfSlider(index) {
+    const last_item = this.items_array.length - 1;
+
+    this.index_item = {
+      prev: index ? index - 1 : undefined,
+      active: index,
+      next: index === last_item ? undefined : index + 1,
+    };
+  }
+
   //   setup of class
   eventsListener() {
     this.dt_slider.addEventListener("mousedown", this.startSlider);
@@ -66,6 +105,7 @@ export default class Slider {
   init() {
     this.eventBind();
     this.eventsListener();
+    this.itemOfSliderConfig();
     return this;
   }
 }
