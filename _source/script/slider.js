@@ -15,6 +15,13 @@ export default class Slider {
     this.slider.style.transition = active ? "transform .3s" : "";
   }
 
+  changeActiveItem() {
+    this.items_array.forEach((i) => i.item.classList.remove("__active-item"));
+    this.items_array[this.index_item.active].item.classList.add(
+      "__active-item"
+    );
+  }
+
   // move slider
   startSlider(ev) {
     let type_event;
@@ -87,8 +94,6 @@ export default class Slider {
         item,
       };
     });
-
-    console.log(this.items_array);
   }
 
   itemOfSliderPosition(item) {
@@ -104,6 +109,8 @@ export default class Slider {
     this.moveSlider(active_item.position_item);
 
     this.position.last = active_item.position_item;
+
+    this.changeActiveItem();
   }
 
   itemIndexOfSlider(index) {
@@ -134,14 +141,28 @@ export default class Slider {
     this.dt_slider.addEventListener("mouseup", this.offSliderMove);
   }
 
+  onRisize() {
+    setTimeout(() => {
+      this.itemOfSliderConfig();
+      this.changeItemSlider(this.index_item.active);
+    }, 1000);
+  }
+
+  addRisizeEvent() {
+    window.addEventListener("resize", this.onRisize);
+  }
+
   eventBind() {
     this.startSlider = this.startSlider.bind(this);
     this.onSliderMove = this.onSliderMove.bind(this);
     this.offSliderMove = this.offSliderMove.bind(this);
+
+    this.onRisize = this.onRisize.bind(this);
   }
 
   init() {
     this.eventBind();
+    this.onRisize();
     this.itemsTransition(true);
     this.eventsListener();
     this.itemOfSliderConfig();
