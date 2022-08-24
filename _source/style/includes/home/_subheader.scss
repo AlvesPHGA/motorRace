@@ -9,6 +9,7 @@
   .slider-show {
     height: 100%;
     width: 100%;
+    position: relative;
 
     .slider {
       height: 100%;
@@ -118,6 +119,31 @@
             color: $white;
             background-color: $dark_imperial_blue;
           }
+        }
+      }
+    }
+
+    .slider-counters {
+      position: absolute;
+      bottom: 10px;
+      display: flex;
+      flex-flow: row nowrap;
+      left: 50%;
+      transform: translateX(-50px);
+      gap: 10px;
+
+      .__counter {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $white;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover,
+        &.__active-counter {
+          transform: scale(1.1);
+          background-color: $dark_imperial_blue;
         }
       }
     }

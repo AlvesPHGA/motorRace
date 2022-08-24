@@ -1,4 +1,4 @@
-export default class Slider {
+export class Slider {
   constructor(dt_slider, slider) {
     this.dt_slider = document.querySelector(dt_slider);
     this.slider = document.querySelector(slider);
@@ -8,6 +8,8 @@ export default class Slider {
       start: 0,
       movement: 0,
     };
+
+    this.changeEvent = new Event("changeEvent");
   }
 
   // utils
@@ -111,6 +113,8 @@ export default class Slider {
     this.position.last = active_item.position_item;
 
     this.changeActiveItem();
+
+    this.slider.dispatchEvent(this.changeEvent);
   }
 
   itemIndexOfSlider(index) {
@@ -175,6 +179,11 @@ export default class Slider {
 }
 
 export class SliderNav extends Slider {
+  constructor(dt_slider, slider) {
+    super(dt_slider, slider);
+    this.eventBindCounters();
+  }
+
   addArrow(previous, next) {
     this.previous_element = document.querySelector(previous);
     this.next_element = document.querySelector(next);
@@ -185,5 +194,50 @@ export class SliderNav extends Slider {
   addArrowEvent() {
     this.previous_element.addEventListener("click", this.activePreviousItem);
     this.next_element.addEventListener("click", this.activeNextItem);
+  }
+
+  createCounters() {
+    const counters = document.querySelector(".slider-counters");
+
+    this.items_array.forEach((item, index) => {
+      counters.innerHTML += ` 
+        <span class = "__counter"><a href = '#item${index + 1}'></a></span>
+      `;
+    });
+
+    return counters;
+  }
+
+  activeCounter() {
+    this.counters_array.forEach((i) => {
+      i.classList.remove("__active-counter");
+    });
+    this.counters_array[this.index_item.active].classList.add(
+      "__active-counter"
+    );
+  }
+
+  eventToCounters(item, index) {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      this.changeItemSlider(index);
+    });
+
+    this.slider.addEventListener("changeEvent", this.activeCounter);
+  }
+
+  addCounters(custom_counters) {
+    this.counter =
+      document.querySelector(custom_counters) || this.createCounters();
+
+    this.counters_array = [...this.counter.children];
+
+    this.activeCounter();
+    this.counters_array.forEach(this.eventToCounters);
+  }
+
+  eventBindCounters() {
+    this.eventToCounters = this.eventToCounters.bind(this);
+    this.activeCounter = this.activeCounter.bind(this);
   }
 }
