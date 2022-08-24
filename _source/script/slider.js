@@ -157,6 +157,9 @@ export default class Slider {
     this.onSliderMove = this.onSliderMove.bind(this);
     this.offSliderMove = this.offSliderMove.bind(this);
 
+    this.activePreviousItem = this.activePreviousItem.bind(this);
+    this.activeNextItem = this.activeNextItem.bind(this);
+
     this.onRisize = this.onRisize.bind(this);
   }
 
@@ -166,6 +169,21 @@ export default class Slider {
     this.itemsTransition(true);
     this.eventsListener();
     this.itemOfSliderConfig();
+    this.changeItemSlider(0);
     return this;
+  }
+}
+
+export class SliderNav extends Slider {
+  addArrow(previous, next) {
+    this.previous_element = document.querySelector(previous);
+    this.next_element = document.querySelector(next);
+
+    this.addArrowEvent();
+  }
+
+  addArrowEvent() {
+    this.previous_element.addEventListener("click", this.activePreviousItem);
+    this.next_element.addEventListener("click", this.activeNextItem);
   }
 }

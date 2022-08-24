@@ -9,4 +9,3 @@ sliderMoto.init();
 
 const sliderShow = new Slider("[data-slider]", ".__slider-contents");
 sliderShow.init();
-sliderShow.changeItemSlider(0);
