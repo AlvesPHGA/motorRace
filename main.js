@@ -1,5 +1,6 @@
 import SliderCarrossel from "./_source/script/slider-carrossel.js";
-import { SliderNav } from "./_source/script/slider.js";
+
+import InfiniteSlider from "./_source/script/infinite-slider.js";
 
 const sliderMoto = new SliderCarrossel(
   "[data-carrossel=motos]",
@@ -7,6 +8,9 @@ const sliderMoto = new SliderCarrossel(
 );
 sliderMoto.init();
 
-const sliderShow = new SliderNav("[data-slider]", ".__slider-contents");
-sliderShow.init();
-sliderShow.addCounters();
+const subheaderSlider = new InfiniteSlider(
+  "[data-slider=infinite-slider]",
+  ".__slider-contents"
+);
+
+subheaderSlider.init();

@@ -193,6 +193,7 @@ header {
     .subheader .slider-show .slider {
       height: 100%;
       width: 100vw;
+      margin-left: -100vw;
       display: flex;
       flex-flow: row nowrap; }
       .subheader .slider-show .slider .slider-item {

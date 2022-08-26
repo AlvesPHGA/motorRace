@@ -62,6 +62,8 @@ export class Slider {
   moveSlider(distX) {
     this.position.new = distX;
     this.slider.style.transform = `translate3d(${distX}px, 0, 0)`;
+
+    this.checkBoudary();
   }
 
   changeItemOffSliderMove() {
@@ -143,6 +145,13 @@ export class Slider {
     this.dt_slider.addEventListener("mousedown", this.startSlider);
 
     this.dt_slider.addEventListener("mouseup", this.offSliderMove);
+  }
+
+  checkBoudary() {
+    const slider = this.dt_slider.getBoundingClientRect();
+    const inside = this.slider.getBoundingClientRect();
+
+    if (inside.left > 0) this.slider.style.transform = `translate3d(0, 0, 0)`;
   }
 
   onRisize() {
