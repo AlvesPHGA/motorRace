@@ -812,7 +812,8 @@ header {
     position: relative;
     z-index: 0;
     padding: 10px 0;
-    scroll-snap-type: x mandatory; }
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; }
     @media (max-width: 320px) {
       .slider-motos .slider-items {
         scroll-padding: 10px;
@@ -864,11 +865,12 @@ header {
     .slider-motos .__btn svg path {
       stroke: rgba(160, 0, 16, 0.5); }
     .slider-motos .__btn.__desabled {
-      pointer-events: none; }
+      pointer-events: none;
+      opacity: 0.5; }
 
-.next {
+.__next {
   right: 0; }
-  .next svg {
+  .__next svg {
     transform: rotate(180deg); }
 
 .__slider-brands {

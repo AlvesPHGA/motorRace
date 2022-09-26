@@ -22,6 +22,7 @@
     padding: 10px 0;
 
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 
     @include mobile_s {
       scroll-padding: 10px;
@@ -96,11 +97,12 @@
 
     &.__desabled {
       pointer-events: none;
+      opacity: 0.5;
     }
   }
 }
 
-.next {
+.__next {
   right: 0;
 
   svg {
