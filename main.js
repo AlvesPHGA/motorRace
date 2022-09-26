@@ -1,15 +1,8 @@
-import SliderCarrossel from "./_source/script/slider-carrossel.js";
+import SliderInfinite from "./_source/script/slider-infinite.js";
 
-import InfiniteSlider from "./_source/script/infinite-slider.js";
-
-const sliderMoto = new SliderCarrossel(
-  "[data-carrossel=motos]",
-  ".slider-items"
-);
-sliderMoto.init();
-
-const subheaderSlider = new InfiniteSlider(
+const sliderSubheader = new SliderInfinite(
   "[data-slider=infinite-slider]",
   ".__slider-contents"
 );
-subheaderSlider.init();
+
+sliderSubheader.init();

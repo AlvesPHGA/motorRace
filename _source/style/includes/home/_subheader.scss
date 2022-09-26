@@ -13,16 +13,16 @@
 
     .slider {
       height: 100%;
-      width: 100vw; //100%;;
+      width: 100%; //100%;;
 
-      margin-left: -100vw;
+      margin-left: -100%;
 
       display: flex;
       flex-flow: row nowrap;
 
       .slider-item {
         height: 100%;
-        width: 100vw; //100%;
+        width: 100%; //100%;
         background: url("./public/images/jpg/imgSubheader.jpg") no-repeat center;
         background-size: 100% 100%;
         padding-top: 40px;

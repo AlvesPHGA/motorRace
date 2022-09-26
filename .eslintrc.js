@@ -15,5 +15,6 @@ module.exports = {
     "max-classes-per-file": 0,
     radix: 0,
     "prefer-const": 0,
+    "one-var": 0,
   },
 };
