@@ -2,7 +2,7 @@
   padding-block: 100px;
 
   @include mobile_s {
-    padding-block: 40px;
+    padding: 40px 0 20px;
   }
 
   .motos {

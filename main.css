@@ -383,7 +383,7 @@ header {
   padding-block: 100px; }
   @media (max-width: 320px) {
     .motos-brands {
-      padding-block: 40px; } }
+      padding: 40px 0 20px; } }
   .motos-brands .motos h2 {
     font-family: "Oswald", sans-serif;
     font-weight: bold;
@@ -875,21 +875,27 @@ header {
   height: fit-content;
   width: 100%;
   margin-top: 20px;
-  display: none; }
+  display: none;
+  height: 150px;
+  overflow: hidden; }
   @media (max-width: 320px) {
     .__slider-brands {
       display: block; } }
   .__slider-brands .__slider {
-    height: 100%;
-    width: 100%; }
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    flex-shrink: 0; }
     .__slider-brands .__slider .__item {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      align-items: center;
-      column-gap: 20px; }
-      .__slider-brands .__slider .__item img {
-        height: 100%;
-        object-fit: fill; }
+      flex-shrink: 0;
+      width: 100%;
+      display: flex;
+      gap: 1rem;
+      align-items: center; }
+      .__slider-brands .__slider .__item .content {
+        width: 100%; }
+        .__slider-brands .__slider .__item .content img {
+          width: 100%; }
 
 .info-social-mobile {
   display: none; }

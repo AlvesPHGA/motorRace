@@ -12,5 +12,4 @@ const subheaderSlider = new InfiniteSlider(
   "[data-slider=infinite-slider]",
   ".__slider-contents"
 );
-
 subheaderSlider.init();

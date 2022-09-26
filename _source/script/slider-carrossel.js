@@ -52,8 +52,10 @@ export default class SliderCarrossel {
 
     if (slider_items_style_left > 0) this.slider_items.style.left = "0px";
 
-    if (inside_slider.right < slider.right)
-      this.slider_items.style.left = `-${inside_slider.width - slider.width}px`;
+    // if (inside_slider.right < slider.right)
+    console.log(inside_slider);
+    console.log(slider);
+    // this.slider_items.style.left = `-${inside_slider.width - slider.width}px`;
   }
 
   previousNextButtons() {
