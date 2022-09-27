@@ -879,21 +879,25 @@ header {
   margin-top: 20px;
   display: none;
   height: 150px;
-  overflow: hidden; }
+  grid-column: 1/-1; }
   @media (max-width: 320px) {
     .__slider-brands {
       display: block; } }
+  .__slider-brands .__content-slider {
+    grid-column: 1 / -1; }
   .__slider-brands .__slider {
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
-    flex-shrink: 0; }
+    flex-shrink: 0;
+    padding: 0 15px; }
     .__slider-brands .__slider .__item {
       flex-shrink: 0;
-      width: 100%;
+      width: 300px;
       display: flex;
       gap: 1rem;
-      align-items: center; }
+      align-items: center;
+      margin: 0 30px; }
       .__slider-brands .__slider .__item .content {
         width: 100%; }
         .__slider-brands .__slider .__item .content img {
