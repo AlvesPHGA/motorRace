@@ -164,6 +164,8 @@ h3 {
   border-radius: 0.3125rem;
   display: inline-block;
   transition: all 0.7s ease;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
 }
 .__subheader .__slider-container .__slider-item .__link:hover {
   background-color: #0b1370;
