@@ -12,6 +12,8 @@ h1,
 h2,
 h3 {
   @include linkNav_titles($f_weight: 700, $color: $darkImperialBlue);
+  text-transform: uppercase;
+  position: relative;
 }
 
 h1,

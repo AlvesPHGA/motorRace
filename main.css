@@ -15,6 +15,8 @@ h3 {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   color: #0b1370;
+  text-transform: uppercase;
+  position: relative;
 }
 
 h1,
@@ -170,4 +172,55 @@ h3 {
 .__subheader .__slider-container .__slider-item .__link:hover {
   background-color: #0b1370;
   color: #ffffff;
+}
+
+.__about-us {
+  height: 33.75rem;
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+.__about-us .__back-image {
+  background: url("../../../../images/jpg/about.jpg") center no-repeat;
+  background-size: cover;
+}
+.__about-us .__description {
+  background: #0b1370;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.__about-us .__description h2 {
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+.__about-us .__description h2::before {
+  content: "";
+  width: 5.5rem;
+  height: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  position: absolute;
+  left: 110%;
+  border-radius: 1.25rem;
+}
+.__about-us .__description h2::after {
+  content: "";
+  width: 5.5rem;
+  height: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  position: absolute;
+  right: 110%;
+  border-radius: 1.25rem;
+}
+.__about-us .__description p {
+  font-family: "Oxygen", sans-serif;
+  font-size: 1.124rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.6875rem;
+  width: 34.75rem;
 }/*# sourceMappingURL=main.css.map */
