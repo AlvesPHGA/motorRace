@@ -1,0 +1,57 @@
+.__motos-brands {
+  text-align: center;
+  padding: 6.25rem 0;
+
+  h2 {
+    &::before {
+      content: "";
+      width: 40vw;
+      height: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $darkImperialBlue;
+      position: absolute;
+      left: 0;
+      border-radius: 0 1.25rem 1.25rem 0;
+    }
+
+    &::after {
+      content: "";
+      width: 40vw;
+      height: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $darkImperialBlue;
+      position: absolute;
+      right: 0;
+      border-radius: 1.25rem 0 0 1.25rem;
+    }
+  }
+
+  .__motos {
+    .__slider-motos {
+      height: 20rem;
+      position: relative;
+      margin: 2.5rem 0;
+
+      .__slider-content {
+        height: 17.5rem;
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1.25rem;
+
+        .__card {
+          height: 100%;
+          width: 20rem;
+          flex-shrink: 0;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.3125rem;
+          }
+        }
+      }
+    }
+  }
+}
