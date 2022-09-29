@@ -323,4 +323,33 @@ h3 {
 }
 .__motos-brands .__motos .__slider-motos .__next svg {
   transform: rotate(180deg);
+}
+.__motos-brands .__brands h3::before {
+  content: "";
+  width: 15vw;
+  height: 0.3125rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0b1370;
+  position: absolute;
+  left: 12.5rem;
+  border-radius: 1.25rem;
+}
+.__motos-brands .__brands h3::after {
+  content: "";
+  width: 15vw;
+  height: 0.3125rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0b1370;
+  position: absolute;
+  right: 12.5rem;
+  border-radius: 1.25rem;
+}
+.__motos-brands .__brands .__brands-wrapp {
+  width: 100%;
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex-shrink: 0;
 }/*# sourceMappingURL=main.css.map */

@@ -28,6 +28,7 @@
     }
   }
 
+  // moto
   .__motos {
     .__slider-motos {
       position: relative;
@@ -117,6 +118,43 @@
           transform: rotate(180deg);
         }
       }
+    }
+  }
+
+  // brands
+  .__brands {
+    h3 {
+      &::before {
+        content: "";
+        width: 15vw;
+        height: 0.3125rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: $darkImperialBlue;
+        position: absolute;
+        left: 12.5rem;
+        border-radius: 1.25rem;
+      }
+
+      &::after {
+        content: "";
+        width: 15vw;
+        height: 0.3125rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: $darkImperialBlue;
+        position: absolute;
+        right: 12.5rem;
+        border-radius: 1.25rem;
+      }
+    }
+
+    .__brands-wrapp {
+      width: 100%;
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      flex-shrink: 0;
     }
   }
 }
