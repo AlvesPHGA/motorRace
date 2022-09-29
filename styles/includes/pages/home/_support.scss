@@ -1,0 +1,87 @@
+.__support {
+  height: 32.5rem;
+  background: url("../../../../images/jpg/backSupport.jpg") center no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  padding: 2.5rem 0 5rem;
+
+  h2 {
+    &::before {
+      content: "";
+      width: 40vw;
+      height: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $darkImperialBlue;
+      position: absolute;
+      left: 0;
+      border-radius: 0 1.25rem 1.25rem 0;
+    }
+
+    &::after {
+      content: "";
+      width: 40vw;
+      height: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $darkImperialBlue;
+      position: absolute;
+      right: 0;
+      border-radius: 1.25rem 0 0 1.25rem;
+    }
+  }
+
+  .__box-support {
+    justify-content: space-between;
+    margin-top: 1.75rem;
+
+    .__card {
+      width: 17.5rem;
+      height: 16.75rem;
+      background: rgba($color: $white, $alpha: 0.7);
+      border: 0.3125rem solid $white;
+      border-radius: 0.3125rem;
+      padding-block: 2.5rem;
+      flex-direction: column;
+      justify-content: space-around;
+      cursor: pointer;
+      transition: all 0.7s ease;
+
+      &:hover {
+        background-color: rgba($color: $darkImperialBlue, $alpha: 0.7);
+        border-color: $darkImperialBlue;
+        color: $white;
+        //   padding: 0 1.125rem;
+
+        .__icon {
+          display: none;
+        }
+
+        .__legend {
+          color: $white;
+        }
+
+        .__text-card {
+          display: block;
+        }
+      }
+
+      .__legend {
+        @include linkNav_titles($f_weight: 700, $color: $darkImperialBlue);
+        text-transform: uppercase;
+      }
+
+      .__text-card {
+        display: none;
+        @include text(
+          $f_size: 1rem,
+          $f_weight: 400,
+          $color: $white,
+          $l_height: 1.5rem
+        );
+        width: 15.25rem;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
