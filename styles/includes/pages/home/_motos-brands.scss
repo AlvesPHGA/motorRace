@@ -30,26 +30,91 @@
 
   .__motos {
     .__slider-motos {
+      position: relative;
       height: 20rem;
       position: relative;
       margin: 2.5rem 0;
+      overflow: hidden;
 
       .__slider-content {
+        position: absolute;
         height: 17.5rem;
         display: flex;
         flex-flow: row nowrap;
+        padding: 0 1.25rem;
         gap: 1.25rem;
+        top: 50%;
+        transform: translateY(-50%);
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
 
         .__card {
           height: 100%;
           width: 20rem;
           flex-shrink: 0;
+          scroll-snap-align: center;
 
           img {
             width: 100%;
             height: 100%;
             border-radius: 0.3125rem;
           }
+        }
+      }
+
+      .__btn {
+        border: none;
+        padding: 0 1.25rem;
+        background: rgba($color: $amaranth, $alpha: 0.3);
+        border-radius: 0.3125rem;
+        position: absolute;
+        top: 0;
+        height: inherit;
+        width: fit-content;
+        z-index: 1;
+        cursor: pointer;
+        transition: all 0.8s ease;
+
+        svg {
+          path {
+            stroke: rgba($color: $carmine, $alpha: 0.5);
+          }
+        }
+
+        &:hover {
+          background: rgba($color: $amaranth, $alpha: 0.5);
+
+          svg {
+            path {
+              stroke: rgba($color: $carmine, $alpha: 1);
+            }
+          }
+        }
+      }
+
+      .__previous,
+      .__next {
+        &.__desbled-button {
+          pointer-events: none;
+          background: rgba($color: $amaranth, $alpha: 0.25);
+
+          svg {
+            path {
+              stroke: rgba($color: $carmine, $alpha: 0.3);
+            }
+          }
+        }
+      }
+
+      .__previous {
+        left: 3vw;
+      }
+
+      .__next {
+        right: 3vw;
+
+        svg {
+          transform: rotate(180deg);
         }
       }
     }
