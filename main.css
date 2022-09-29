@@ -54,6 +54,11 @@ h3 {
   }
 }
 
+.__flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
 .__header {
   background: #2a328f;
   padding: 20px 0;
@@ -363,4 +368,54 @@ h3 {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.__support {
+  height: 32.5rem;
+  background: url("../../../../images/jpg/backSupport.jpg") center no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  padding: 2.5rem 0 5rem;
+}
+.__support h2::before {
+  content: "";
+  width: 40vw;
+  height: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0b1370;
+  position: absolute;
+  left: 0;
+  border-radius: 0 1.25rem 1.25rem 0;
+}
+.__support h2::after {
+  content: "";
+  width: 40vw;
+  height: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0b1370;
+  position: absolute;
+  right: 0;
+  border-radius: 1.25rem 0 0 1.25rem;
+}
+.__support .__box-support {
+  justify-content: space-between;
+  margin-top: 1.25rem;
+}
+.__support .__box-support .__card {
+  width: 17.5rem;
+  height: 16.75rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 0.3125rem solid #ffffff;
+  border-radius: 0.3125rem;
+  padding-block: 2.5rem;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.__support .__box-support .__card .__legend {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  color: #0b1370;
+  text-transform: uppercase;
 }/*# sourceMappingURL=main.css.map */
