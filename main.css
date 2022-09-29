@@ -401,7 +401,7 @@ h3 {
 }
 .__support .__box-support {
   justify-content: space-between;
-  margin-top: 1.25rem;
+  margin-top: 1.75rem;
 }
 .__support .__box-support .__card {
   width: 17.5rem;
@@ -412,10 +412,36 @@ h3 {
   padding-block: 2.5rem;
   flex-direction: column;
   justify-content: space-around;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+.__support .__box-support .__card:hover {
+  background-color: rgba(11, 19, 112, 0.7);
+  border-color: #0b1370;
+  color: #ffffff;
+}
+.__support .__box-support .__card:hover .__icon {
+  display: none;
+}
+.__support .__box-support .__card:hover .__legend {
+  color: #ffffff;
+}
+.__support .__box-support .__card:hover .__text-card {
+  display: block;
 }
 .__support .__box-support .__card .__legend {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   color: #0b1370;
   text-transform: uppercase;
+}
+.__support .__box-support .__card .__text-card {
+  display: none;
+  font-family: "Oxygen", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.5rem;
+  width: 15.25rem;
+  margin-top: 0.5rem;
 }/*# sourceMappingURL=main.css.map */
