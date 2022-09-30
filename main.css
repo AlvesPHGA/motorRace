@@ -54,9 +54,40 @@ h3 {
   }
 }
 
+.__title {
+  position: relative;
+}
+.__title::before {
+  content: "";
+  width: 35vw;
+  height: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0b1370;
+  position: absolute;
+  left: 0;
+  border-radius: 0 1.25rem 1.25rem 0;
+}
+.__title::after {
+  content: "";
+  width: 35vw;
+  height: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0b1370;
+  position: absolute;
+  right: 0;
+  border-radius: 1.25rem 0 0 1.25rem;
+}
+
 .__flex-align-center {
   display: flex;
   align-items: center;
+}
+
+.__flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .__header {
@@ -125,31 +156,6 @@ h3 {
   background: url("../../../../images/jpg/imgSubheader.jpg") center no-repeat;
   background-size: 100% 100%;
   padding-top: 1rem;
-}
-.__subheader .__slider-container .__slider-item h1 {
-  position: relative;
-}
-.__subheader .__slider-container .__slider-item h1::before {
-  content: "";
-  width: 35vw;
-  height: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #0b1370;
-  position: absolute;
-  left: 0;
-  border-radius: 0 1.25rem 1.25rem 0;
-}
-.__subheader .__slider-container .__slider-item h1::after {
-  content: "";
-  width: 35vw;
-  height: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #0b1370;
-  position: absolute;
-  right: 0;
-  border-radius: 1.25rem 0 0 1.25rem;
 }
 .__subheader .__slider-container .__slider-item p {
   font-family: "Oxygen", sans-serif;
@@ -444,4 +450,83 @@ h3 {
   line-height: 1.5rem;
   width: 15.25rem;
   margin-top: 0.5rem;
+}
+
+.__contact {
+  background-color: #0b1370;
+  color: #ffffff;
+  padding-block: 6.25rem;
+}
+.__contact .__title {
+  color: #ffffff;
+  text-align: center;
+}
+.__contact .__title::before, .__contact .__title::after {
+  background: #ffffff;
+}
+.__contact .__contacts {
+  margin-top: 2.5rem;
+}
+.__contact .__contacts form {
+  background: #2a328f;
+  border-radius: 0.3125rem;
+  padding: 2.5rem;
+}
+.__contact .__contacts form .__input-field {
+  margin-top: 1.25rem;
+}
+.__contact .__contacts form .__input-field:nth-child(1) {
+  margin-top: 0;
+}
+.__contact .__contacts form .__input-field label {
+  font-family: "Oxygen", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: normal;
+  margin-bottom: 0.5rem;
+}
+.__contact .__contacts form .__input-field input,
+.__contact .__contacts form .__input-field textarea {
+  width: 30rem;
+  border-radius: 0.3125rem;
+  background: #ffffff;
+  border: none;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+}
+.__contact .__contacts form .__input-field input {
+  height: 3.25rem;
+}
+.__contact .__contacts form .__input-field textarea {
+  height: 9.5rem;
+  resize: none;
+}
+.__contact .__contacts form .__button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 0.125rem solid #ffffff;
+  border-radius: 0.3125rem;
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  display: block;
+  margin-left: auto;
+  margin-top: 2.5rem;
+  cursor: pointer;
+  transition: all 0.8s ease-in-out;
+  font-family: "Anton", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: normal;
+}
+.__contact .__contacts form .__button:hover {
+  background: #ffffff;
+  color: #2a328f;
 }/*# sourceMappingURL=main.css.map */

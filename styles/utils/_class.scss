@@ -21,7 +21,40 @@
   }
 }
 
+.__title {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 35vw;
+    height: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $darkImperialBlue;
+    position: absolute;
+    left: 0;
+    border-radius: 0 1.25rem 1.25rem 0;
+  }
+
+  &::after {
+    content: "";
+    width: 35vw;
+    height: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $darkImperialBlue;
+    position: absolute;
+    right: 0;
+    border-radius: 1.25rem 0 0 1.25rem;
+  }
+}
+
 .__flex-align-center {
   display: flex;
   align-items: center;
+}
+
+.__flex-column {
+  display: flex;
+  flex-direction: column;
 }

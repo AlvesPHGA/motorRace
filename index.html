@@ -57,9 +57,9 @@
       <section class="__subheader" data-slider="infinite">
          <section class="__slider-container">
             <section class="__slider-item">
-               <div class="__title">
-                  <h1>Lançamentos</h1>
-               </div>
+
+               <h1 class="__title">Lançamentos</h1>
+
                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                <a href="" class="__link">Ver mais</a>
             </section>
@@ -80,7 +80,7 @@
       <!-- MOTOS & BRANDS -->
       <section class="__motos-brands">
          <section class="__motos">
-            <h2>Motos</h2>
+            <h2 class="__title">Motos</h2>
             <section class="__slider-motos" data-slider="scroll">
                <section class="__slider-content">
 
@@ -154,7 +154,7 @@
 
       <!-- SUPPORT -->
       <section class="__support">
-         <h2>Suporte</h2>
+         <h2 class="__title">Suporte</h2>
          <section class="__box-support __width-1200 __flex-align-center">
             <div class="__card __flex-align-center">
                <div class="__icon">
@@ -188,33 +188,36 @@
 
       <!-- CONTACT -->
       <section class="__contact">
+         <h2 class="__title">Contato</h2>
          <div class="__back-img"></div>
-         <section class="__contacts __width-1200">
+         <section class="__contacts __flex-align-center __width-1200">
             <form>
-               <div class="__input-field">
+               <div class="__input-field __flex-column">
                   <label for="name">Nome</label>
                   <input type="text" id="name" name="name">
                </div>
 
-               <div class="__input-field">
+               <div class="__input-field __flex-column">
                   <label for="email">Email</label>
                   <input type="email" id="email" name="email">
                </div>
 
-               <div class="__input-field">
+               <div class="__input-field __flex-column">
                   <label for="numberPhone">Tel. / WhatsApp</label>
                   <input type="tel" id="numberPhone" name="numberPhone">
                </div>
 
-               <div class="__input-field">
-                  <label for="objective">Assunto</label>
-                  <input type="text" id="objective" name="objective">
+               <div class="__input-field __flex-column">
+                  <label for="subject">Assunto</label>
+                  <input type="text" id="subject" name="subject">
                </div>
 
-               <div class="__input-field">
+               <div class="__input-field __flex-column">
                   <label for="message">Mensagem</label>
                   <textarea name="message" id="message"></textarea>
                </div>
+
+               <button class="__button">Enviar</button>
             </form>
          </section>
       </section>

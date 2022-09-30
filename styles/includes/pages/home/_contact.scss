@@ -1,0 +1,90 @@
+.__contact {
+  background-color: $darkImperialBlue;
+  color: $white;
+  padding-block: 6.25rem;
+
+  .__title {
+    color: $white;
+    text-align: center;
+
+    &::before,
+    &::after {
+      background: $white;
+    }
+  }
+  .__contacts {
+    margin-top: 2.5rem;
+
+    form {
+      background: $cosmicCobalt;
+      border-radius: 0.3125rem;
+      padding: 2.5rem;
+
+      .__input-field {
+        margin-top: 1.25rem;
+
+        &:nth-child(1) {
+          margin-top: 0;
+        }
+
+        label {
+          @include text(
+            $f_size: 1.25rem,
+            $f_weight: 700,
+            $color: $white,
+            $l_height: normal
+          );
+
+          margin-bottom: 0.5rem;
+        }
+
+        input,
+        textarea {
+          width: 30rem;
+          border-radius: 0.3125rem;
+          background: $white;
+          border: none;
+          font-size: 1.25rem;
+          padding: 0.25rem 0.5rem;
+        }
+
+        input {
+          height: 3.25rem;
+        }
+
+        textarea {
+          height: 9.5rem;
+          resize: none;
+        }
+      }
+
+      .__button {
+        width: fit-content;
+        height: fit-content;
+        border: 0.125rem solid $white;
+        border-radius: 0.3125rem;
+        background: transparent;
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+        padding: 0.5rem 1.25rem;
+        display: block;
+        margin-left: auto;
+        margin-top: 2.5rem;
+        cursor: pointer;
+        transition: all 0.8s ease-in-out;
+
+        @include btn_link(
+          $f_size: 1.5rem,
+          $f_weight: bold,
+          $color: $white,
+          $l_height: normal
+        );
+
+        &:hover {
+          background: $white;
+          color: $cosmicCobalt;
+        }
+      }
+    }
+  }
+}
