@@ -1,0 +1,14 @@
+.__social-media {
+  a svg {
+    transform: scale(1);
+    transition: all 0.7s ease;
+
+    &:nth-child(2) {
+      margin: 0 0.3125rem;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

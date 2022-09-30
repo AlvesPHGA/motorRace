@@ -86,5 +86,55 @@
         }
       }
     }
+
+    .__box-info-contact {
+      display: block;
+      margin-left: auto;
+      background: rgba($color: $darkImperialBlue, $alpha: 0.6);
+      width: 29rem;
+      border-radius: 0.3125rem;
+      padding: 1.25rem;
+      position: relative;
+
+      .__info-contact {
+        display: flex;
+        gap: 1.25rem;
+        margin-top: 2rem;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        span {
+          display: block;
+          @include text(
+            $f_size: 2rem,
+            $f_weight: 700,
+            $color: $white,
+            $l_height: 3rem
+          );
+        }
+      }
+
+      .__social-media {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+
+        a {
+          &:nth-child(2) {
+            margin: 0 1.25rem;
+          }
+        }
+
+        a svg {
+          transform: scale(1.5);
+
+          &:hover {
+            transform: scale(1.7);
+          }
+        }
+      }
+    }
   }
 }

@@ -130,14 +130,15 @@ h3 {
 .__header .__links .__nav-menu a:hover::before {
   width: 100%;
 }
-.__header .__links .__social-media a svg {
+
+.__social-media a svg {
   transform: scale(1);
   transition: all 0.7s ease;
 }
-.__header .__links .__social-media a svg:nth-child(2) {
+.__social-media a svg:nth-child(2) {
   margin: 0 0.3125rem;
 }
-.__header .__links .__social-media a svg:hover {
+.__social-media a svg:hover {
   transform: scale(1.1);
 }
 
@@ -529,4 +530,43 @@ h3 {
 .__contact .__contacts form .__button:hover {
   background: #ffffff;
   color: #2a328f;
+}
+.__contact .__contacts .__box-info-contact {
+  display: block;
+  margin-left: auto;
+  background: rgba(11, 19, 112, 0.6);
+  width: 29rem;
+  border-radius: 0.3125rem;
+  padding: 1.25rem;
+  position: relative;
+}
+.__contact .__contacts .__box-info-contact .__info-contact {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.__contact .__contacts .__box-info-contact .__info-contact:first-child {
+  margin-top: 0;
+}
+.__contact .__contacts .__box-info-contact .__info-contact span {
+  display: block;
+  font-family: "Oxygen", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 3rem;
+}
+.__contact .__contacts .__box-info-contact .__social-media {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.__contact .__contacts .__box-info-contact .__social-media a:nth-child(2) {
+  margin: 0 1.25rem;
+}
+.__contact .__contacts .__box-info-contact .__social-media a svg {
+  transform: scale(1.5);
+}
+.__contact .__contacts .__box-info-contact .__social-media a svg:hover {
+  transform: scale(1.7);
 }/*# sourceMappingURL=main.css.map */
