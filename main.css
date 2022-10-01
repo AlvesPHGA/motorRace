@@ -457,6 +457,7 @@ h3 {
   background-color: #0b1370;
   color: #ffffff;
   padding-block: 6.25rem;
+  position: relative;
 }
 .__contact .__title {
   color: #ffffff;
@@ -464,6 +465,20 @@ h3 {
 }
 .__contact .__title::before, .__contact .__title::after {
   background: #ffffff;
+  width: 40vw;
+}
+.__contact .__back-img {
+  position: absolute;
+  background: url("../../../../images/jpg/contact.jpg") no-repeat;
+  background-size: cover;
+  width: 70vw;
+  height: 75%;
+  background-position: center;
+  right: 0;
+  z-index: 0;
+  bottom: 7%;
+  opacity: 0.7;
+  border-radius: 0.3125rem 0 0 0.3125rem;
 }
 .__contact .__contacts {
   margin-top: 2.5rem;
@@ -472,6 +487,7 @@ h3 {
   background: #2a328f;
   border-radius: 0.3125rem;
   padding: 2.5rem;
+  position: relative;
 }
 .__contact .__contacts form .__input-field {
   margin-top: 1.25rem;
