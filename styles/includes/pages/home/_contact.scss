@@ -15,7 +15,7 @@
     &::before,
     &::after {
       background: $white;
-      width: 40vw;
+      width: 30vw;
     }
   }
 
@@ -31,16 +31,32 @@
     bottom: 7%;
     opacity: 0.7;
     border-radius: 0.3125rem 0 0 0.3125rem;
+
+    @include mobile_s {
+      background: url("../../../../images/jpg/backContact-mobile.jpg") center
+        no-repeat;
+      opacity: 0.7;
+      bottom: 0;
+      height: 800px;
+      width: 100%;
+      right: initial;
+      background-size: 100% 100%;
+    }
   }
 
   .__flex-align-center {
     @include mobile_s {
       flex-direction: column;
+      gap: 1.25rem;
     }
   }
 
   .__contacts {
     margin-top: 2.5rem;
+
+    @include mobile_s {
+      margin-top: 1.25rem;
+    }
 
     form {
       background: $cosmicCobalt;
@@ -49,7 +65,8 @@
       position: relative;
 
       @include mobile_s {
-        padding: 1.25rem;
+        padding: 0.75rem;
+        width: 100%;
       }
 
       .__input-field {
@@ -68,6 +85,10 @@
           );
 
           margin-bottom: 0.5rem;
+
+          @include mobile_s {
+            font-size: 1rem;
+          }
         }
 
         input,
@@ -123,6 +144,7 @@
 
         @include mobile_s {
           width: 100%;
+          margin-top: 1.25rem;
         }
       }
     }

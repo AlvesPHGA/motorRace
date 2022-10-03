@@ -542,7 +542,7 @@ h3 {
 }
 .__contact .__title::before, .__contact .__title::after {
   background: #ffffff;
-  width: 40vw;
+  width: 30vw;
 }
 .__contact .__back-img {
   position: absolute;
@@ -558,12 +558,29 @@ h3 {
   border-radius: 0.3125rem 0 0 0.3125rem;
 }
 @media (max-width: 320px) {
+  .__contact .__back-img {
+    background: url("../../../../images/jpg/backContact-mobile.jpg") center no-repeat;
+    opacity: 0.7;
+    bottom: 0;
+    height: 800px;
+    width: 100%;
+    right: initial;
+    background-size: 100% 100%;
+  }
+}
+@media (max-width: 320px) {
   .__contact .__flex-align-center {
     flex-direction: column;
+    gap: 1.25rem;
   }
 }
 .__contact .__contacts {
   margin-top: 2.5rem;
+}
+@media (max-width: 320px) {
+  .__contact .__contacts {
+    margin-top: 1.25rem;
+  }
 }
 .__contact .__contacts form {
   background: #2a328f;
@@ -573,7 +590,8 @@ h3 {
 }
 @media (max-width: 320px) {
   .__contact .__contacts form {
-    padding: 1.25rem;
+    padding: 0.75rem;
+    width: 100%;
   }
 }
 .__contact .__contacts form .__input-field {
@@ -589,6 +607,11 @@ h3 {
   color: #ffffff;
   line-height: normal;
   margin-bottom: 0.5rem;
+}
+@media (max-width: 320px) {
+  .__contact .__contacts form .__input-field label {
+    font-size: 1rem;
+  }
 }
 .__contact .__contacts form .__input-field input,
 .__contact .__contacts form .__input-field textarea {
@@ -643,6 +666,7 @@ h3 {
 @media (max-width: 320px) {
   .__contact .__contacts form .__button {
     width: 100%;
+    margin-top: 1.25rem;
   }
 }
 .__contact .__contacts .__box-info-contact {
