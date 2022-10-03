@@ -2,6 +2,16 @@
   background: $cosmicCobalt;
   padding: 2.5rem 8.75rem;
 
+  @include mobile_s {
+    padding: 1.25rem 1rem;
+  }
+
+  .__flex-align-center {
+    @include mobile_s {
+      flex-direction: column;
+    }
+  }
+
   .__contact-social {
     .__info-contact {
       @include text(
@@ -13,15 +23,59 @@
 
       gap: 1rem;
       margin-bottom: 1.125rem;
+
+      @include mobile_s {
+        font-size: 1rem;
+      }
     }
 
     .__last-child {
       width: 18.875rem;
+
+      @include mobile_s {
+        width: 100%;
+        text-align: center;
+        padding: 0 1rem;
+      }
     }
 
     .__social-media {
       gap: 0.75rem;
       margin-left: 3rem;
+
+      @include mobile_s {
+        margin: 0;
+        display: flex;
+        // align-items: initial;
+      }
+    }
+
+    .__phone {
+      grid-area: __phone;
+    }
+
+    .__cellphone {
+      grid-area: __cellphone;
+    }
+
+    .__email {
+      grid-area: __email;
+    }
+
+    .__address {
+      grid-area: __address;
+    }
+
+    .__social-media {
+      grid-area: __social-media;
+    }
+
+    @include mobile_s {
+      display: grid;
+      width: 100%;
+      row-gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "__phone __cellphone" "__email __email" "__address __address" "__social-media __social-media";
     }
   }
 

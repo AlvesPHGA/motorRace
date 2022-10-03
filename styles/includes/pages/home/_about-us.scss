@@ -3,9 +3,17 @@
   display: grid;
   grid-template-columns: 45% 55%;
 
+  @include mobile_s {
+    display: block;
+  }
+
   .__back-image {
     background: url("../../../../images/jpg/about.jpg") center no-repeat;
     background-size: cover;
+
+    @include mobile_s {
+      display: none;
+    }
   }
 
   .__description {
@@ -15,9 +23,18 @@
     flex-direction: column;
     align-items: center;
 
+    @include mobile_s {
+      width: 100%;
+      padding: 1.25rem 1rem;
+    }
+
     h2 {
       color: $white;
       margin-bottom: 1.25rem;
+
+      @include mobile_s {
+        margin-bottom: 1rem;
+      }
 
       &::before {
         content: "";
@@ -53,6 +70,12 @@
       );
 
       width: 34.75rem;
+
+      @include mobile_s {
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+      }
     }
   }
 }

@@ -54,6 +54,11 @@
   align-items: center;
 }
 
+.__flex-wrapp {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .__jus-cont-sb {
   justify-content: space-between;
 }

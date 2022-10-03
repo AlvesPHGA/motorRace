@@ -1,16 +1,11 @@
 .__header {
   background: $cosmicCobalt;
-  padding: 20px 0;
-
-  .__width-1200 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  padding: 1.25rem 0;
 
   .__links {
-    display: flex;
-    align-items: center;
+    @include mobile_s {
+      display: none;
+    }
 
     .__nav-menu {
       margin-right: 13.75rem;

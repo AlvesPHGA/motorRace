@@ -167,6 +167,10 @@
           object-fit: contain;
         }
       }
+
+      @include mobile_s {
+        display: none;
+      }
     }
   }
 }

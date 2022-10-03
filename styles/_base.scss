@@ -19,8 +19,16 @@ h3 {
 h1,
 h2 {
   font-size: 3.75rem;
+
+  @include mobile_s {
+    font-size: 1.25rem;
+  }
 }
 
 h3 {
   font-size: 2.5rem;
+
+  @include mobile_s {
+    font-size: 1.12rem;
+  }
 }
