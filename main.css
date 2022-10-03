@@ -737,6 +737,12 @@ h3 {
 @media (max-width: 320px) {
   .__footer .__flex-align-center {
     flex-direction: column;
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 320px) {
+  .__footer .__contact-social {
+    margin-top: 1.25rem;
   }
 }
 .__footer .__contact-social .__info-contact {
@@ -771,6 +777,7 @@ h3 {
   .__footer .__contact-social .__social-media {
     margin: 0;
     display: flex;
+    justify-content: center;
   }
 }
 .__footer .__contact-social .__phone {
@@ -827,6 +834,34 @@ h3 {
 }
 .__footer .__links-site a:hover::before {
   width: 100%;
+}
+@media (max-width: 320px) {
+  .__footer .__links-site {
+    display: none;
+  }
+}
+.__footer .__links-site-mobile {
+  display: none;
+}
+.__footer .__links-site-mobile a {
+  margin: 1rem auto 0;
+  position: relative;
+  display: block;
+  font-size: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+}
+.__footer .__links-site-mobile a:nth-of-child(1) {
+  margin-top: 0;
+}
+@media (max-width: 320px) {
+  .__footer .__links-site-mobile {
+    display: block;
+  }
 }
 .__footer .__border {
   width: 100%;
