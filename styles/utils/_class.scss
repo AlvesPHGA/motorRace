@@ -47,6 +47,13 @@
     right: 0;
     border-radius: 1.25rem 0 0 1.25rem;
   }
+
+  @include mobile_s {
+    &::before,
+    &::after {
+      width: 25vw;
+    }
+  }
 }
 
 .__flex-align-center {
