@@ -123,14 +123,49 @@ h3 {
 .__header {
   background: #2a328f;
   padding: 1.25rem 0;
+  position: relative;
 }
 @media (max-width: 320px) {
   .__header {
     height: 5rem;
     padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .__header {
+    height: 5rem;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .__header {
+    height: 5rem;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
   }
 }
 @media (max-width: 320px) {
+  .__header .__logo {
+    height: 100%;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .__header .__logo {
+    height: 100%;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
   .__header .__logo {
     height: 100%;
   }
@@ -140,7 +175,27 @@ h3 {
     height: 100%;
   }
 }
+@media (min-width: 321px) and (max-width: 375px) {
+  .__header .__logo img {
+    height: 100%;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .__header .__logo img {
+    height: 100%;
+  }
+}
 @media (max-width: 320px) {
+  .__header .__links {
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .__header .__links {
+    display: none;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
   .__header .__links {
     display: none;
   }
@@ -171,6 +226,25 @@ h3 {
 }
 .__header .__links .__nav-menu a:hover::before {
   width: 100%;
+}
+.__header.__active-menu-mobile {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 5rem;
+  background: #2a328f;
+  width: 100vw;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+}
+.__header.__active-menu-mobile .__nav-menu {
+  margin: 0;
+}
+.__header.__active-menu-mobile .__nav-menu a {
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
 }
 
 .__social-media a svg {
@@ -1029,12 +1103,12 @@ h3 {
   background: #ffffff;
 }
 
-.__menu-active .__box {
+.__menu-hamburger-active .__box {
   height: 0.25rem;
   background: transparent;
   width: 100%;
 }
-.__menu-active .__box:before {
+.__menu-hamburger-active .__box:before {
   position: absolute;
   content: "";
   height: 0.25rem;
@@ -1043,7 +1117,7 @@ h3 {
   width: 100%;
   background: #ffffff;
 }
-.__menu-active .__box::after {
+.__menu-hamburger-active .__box::after {
   position: absolute;
   content: "";
   height: 0.25rem;

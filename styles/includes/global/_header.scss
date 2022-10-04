@@ -1,10 +1,33 @@
 .__header {
   background: $cosmicCobalt;
   padding: 1.25rem 0;
+  position: relative;
 
   @include mobile_s {
     height: 5rem;
     padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+  }
+
+  @include mobile_m {
+    height: 5rem;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+  }
+
+  @include mobile_l {
+    height: 5rem;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
   }
 
   .__logo {
@@ -12,8 +35,24 @@
       height: 100%;
     }
 
+    @include mobile_m {
+      height: 100%;
+    }
+
+    @include mobile_l {
+      height: 100%;
+    }
+
     img {
       @include mobile_s {
+        height: 100%;
+      }
+
+      @include mobile_m {
+        height: 100%;
+      }
+
+      @include mobile_l {
         height: 100%;
       }
     }
@@ -21,6 +60,14 @@
 
   .__links {
     @include mobile_s {
+      display: none;
+    }
+
+    @include mobile_m {
+      display: none;
+    }
+
+    @include mobile_l {
       display: none;
     }
 
@@ -54,6 +101,27 @@
             width: 100%;
           }
         }
+      }
+    }
+  }
+
+  &.__active-menu-mobile {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 5rem;
+    background: $cosmicCobalt;
+    width: 100vw;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+
+    .__nav-menu {
+      margin: 0;
+      a {
+        display: block;
+        margin: 1rem auto;
+        text-align: center;
       }
     }
   }
