@@ -350,6 +350,12 @@ h3 {
   margin: 2.5rem 0;
   overflow: hidden;
 }
+@media (max-width: 320px) {
+  .__motos-brands .__motos .__slider-motos {
+    height: 10rem;
+    margin: 1rem 0;
+  }
+}
 .__motos-brands .__motos .__slider-motos .__slider-content {
   position: absolute;
   height: 17.5rem;
@@ -363,11 +369,21 @@ h3 {
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
 }
+@media (max-width: 320px) {
+  .__motos-brands .__motos .__slider-motos .__slider-content {
+    height: 9.5rem;
+  }
+}
 .__motos-brands .__motos .__slider-motos .__slider-content .__card {
   height: 100%;
   width: 20rem;
   flex-shrink: 0;
   scroll-snap-align: center;
+}
+@media (max-width: 320px) {
+  .__motos-brands .__motos .__slider-motos .__slider-content .__card {
+    width: 11.25rem;
+  }
 }
 .__motos-brands .__motos .__slider-motos .__slider-content .__card img {
   width: 100%;
@@ -388,6 +404,11 @@ h3 {
   z-index: 1;
   cursor: pointer;
   transition: all 0.8s ease;
+}
+@media (max-width: 320px) {
+  .__motos-brands .__motos .__slider-motos .__btn {
+    display: none;
+  }
 }
 .__motos-brands .__motos .__slider-motos .__btn svg path {
   stroke: rgba(160, 0, 16, 0.5);
