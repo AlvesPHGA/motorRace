@@ -46,6 +46,7 @@ h3 {
 @media (max-width: 320px) {
   .__width-1200 {
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0 15px;
   }
@@ -122,6 +123,22 @@ h3 {
 .__header {
   background: #2a328f;
   padding: 1.25rem 0;
+}
+@media (max-width: 320px) {
+  .__header {
+    height: 5rem;
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 320px) {
+  .__header .__logo {
+    height: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .__header .__logo img {
+    height: 100%;
+  }
 }
 @media (max-width: 320px) {
   .__header .__links {
@@ -968,4 +985,70 @@ h3 {
 }
 .__brands-wrapp-mobile .__brands-items .__card img {
   width: 100%;
+}
+
+.__menu-hamburger {
+  display: none;
+  width: 3rem;
+  position: relative;
+}
+@media (max-width: 320px) {
+  .__menu-hamburger {
+    display: block;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .__menu-hamburger {
+    display: block;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .__menu-hamburger {
+    display: block;
+  }
+}
+.__menu-hamburger .__box {
+  height: 0.25rem;
+  background: #ffffff;
+  width: 100%;
+}
+.__menu-hamburger .__box:before {
+  position: absolute;
+  content: "";
+  height: 0.25rem;
+  top: 0.5rem;
+  width: 100%;
+  background: #ffffff;
+}
+.__menu-hamburger .__box::after {
+  position: absolute;
+  content: "";
+  height: 0.25rem;
+  bottom: 0.5rem;
+  width: 100%;
+  background: #ffffff;
+}
+
+.__menu-active .__box {
+  height: 0.25rem;
+  background: transparent;
+  width: 100%;
+}
+.__menu-active .__box:before {
+  position: absolute;
+  content: "";
+  height: 0.25rem;
+  transform: rotate(45deg);
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+}
+.__menu-active .__box::after {
+  position: absolute;
+  content: "";
+  height: 0.25rem;
+  transform: rotate(140deg);
+  top: 0;
+  width: 100%;
+  background: #ffffff;
 }/*# sourceMappingURL=main.css.map */

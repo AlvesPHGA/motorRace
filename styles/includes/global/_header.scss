@@ -2,6 +2,23 @@
   background: $cosmicCobalt;
   padding: 1.25rem 0;
 
+  @include mobile_s {
+    height: 5rem;
+    padding: 1rem 0;
+  }
+
+  .__logo {
+    @include mobile_s {
+      height: 100%;
+    }
+
+    img {
+      @include mobile_s {
+        height: 100%;
+      }
+    }
+  }
+
   .__links {
     @include mobile_s {
       display: none;
