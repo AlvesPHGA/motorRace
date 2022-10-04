@@ -2,6 +2,10 @@
   text-align: center;
   padding: 6.25rem 0;
 
+  @include mobile_s {
+    padding-block: 1.25rem;
+  }
+
   h2 {
     &::before {
       content: "";
