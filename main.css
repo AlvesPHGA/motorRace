@@ -265,6 +265,19 @@ h3 {
 @media (max-width: 320px) {
   .__subheader {
     height: 16.25rem;
+    margin-top: 5rem;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .__subheader {
+    height: 16.25rem;
+    margin-top: 5rem;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .__subheader {
+    height: 16.25rem;
+    margin-top: 5rem;
   }
 }
 .__subheader .__slider-container {

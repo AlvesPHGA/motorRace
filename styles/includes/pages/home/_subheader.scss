@@ -4,6 +4,17 @@
 
   @include mobile_s {
     height: 16.25rem;
+    margin-top: 5rem;
+  }
+
+  @include mobile_m {
+    height: 16.25rem;
+    margin-top: 5rem;
+  }
+
+  @include mobile_l {
+    height: 16.25rem;
+    margin-top: 5rem;
   }
 
   .__slider-container {
