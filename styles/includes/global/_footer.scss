@@ -6,8 +6,26 @@
     padding: 1.25rem 1rem;
   }
 
+  @include mobile_m {
+    padding: 1.25rem 1rem;
+  }
+
+  @include mobile_l {
+    padding: 1.25rem 1rem;
+  }
+
   .__flex-align-center {
     @include mobile_s {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    @include mobile_m {
+      gap: 1.25rem;
+      flex-direction: column;
+    }
+
+    @include mobile_l {
       flex-direction: column;
       gap: 1.25rem;
     }
@@ -17,6 +35,15 @@
     @include mobile_s {
       margin-top: 1.25rem;
     }
+
+    @include mobile_m {
+      margin-top: 1.25rem;
+    }
+
+    @include mobile_l {
+      margin-top: 1.25rem;
+    }
+
     .__info-contact {
       @include text(
         $f_size: 1.125rem,
@@ -31,12 +58,32 @@
       @include mobile_s {
         font-size: 1rem;
       }
+
+      @include mobile_m {
+        font-size: 1rem;
+      }
+
+      @include mobile_l {
+        font-size: 1rem;
+      }
     }
 
     .__last-child {
       width: 18.875rem;
 
       @include mobile_s {
+        width: 100%;
+        text-align: center;
+        padding: 0 1rem;
+      }
+
+      @include mobile_m {
+        width: 100%;
+        text-align: center;
+        padding: 0 1rem;
+      }
+
+      @include mobile_l {
         width: 100%;
         text-align: center;
         padding: 0 1rem;
@@ -48,6 +95,18 @@
       margin-left: 3rem;
 
       @include mobile_s {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      @include mobile_m {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      @include mobile_l {
         margin: 0;
         display: flex;
         justify-content: center;
@@ -75,6 +134,22 @@
     }
 
     @include mobile_s {
+      display: grid;
+      width: 100%;
+      row-gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "__phone __cellphone" "__email __email" "__address __address" "__social-media __social-media";
+    }
+
+    @include mobile_m {
+      display: grid;
+      width: 100%;
+      row-gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "__phone __cellphone" "__email __email" "__address __address" "__social-media __social-media";
+    }
+
+    @include mobile_l {
       display: grid;
       width: 100%;
       row-gap: 1rem;
@@ -119,6 +194,14 @@
     @include mobile_s {
       display: none;
     }
+
+    @include mobile_m {
+      display: none;
+    }
+
+    @include mobile_l {
+      display: none;
+    }
   }
 
   .__links-site-mobile {
@@ -138,6 +221,14 @@
     }
 
     @include mobile_s {
+      display: block;
+    }
+
+    @include mobile_m {
+      display: block;
+    }
+
+    @include mobile_l {
       display: block;
     }
   }

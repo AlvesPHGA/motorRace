@@ -8,6 +8,14 @@
     padding-block: 1.25rem;
   }
 
+  @include mobile_m {
+    padding-block: 1.25rem;
+  }
+
+  @include mobile_l {
+    padding-block: 1.25rem;
+  }
+
   .__title {
     color: $white;
     text-align: center;
@@ -15,7 +23,19 @@
     &::before,
     &::after {
       background: $white;
-      width: 30vw;
+      width: 40vw;
+
+      @include mobile_s {
+        width: 35vw;
+      }
+
+      @include mobile_m {
+        width: 35vw;
+      }
+
+      @include mobile_l {
+        width: 35vw;
+      }
     }
   }
 
@@ -42,10 +62,42 @@
       right: initial;
       background-size: 100% 100%;
     }
+
+    @include mobile_m {
+      background: url("../../../../images/jpg/backContact-mobile.jpg") center
+        no-repeat;
+      opacity: 0.7;
+      bottom: 0;
+      height: 800px;
+      width: 100%;
+      right: initial;
+      background-size: 100% 100%;
+    }
+
+    @include mobile_l {
+      background: url("../../../../images/jpg/backContact-mobile.jpg") center
+        no-repeat;
+      opacity: 0.7;
+      bottom: 0;
+      height: 800px;
+      width: 100%;
+      right: initial;
+      background-size: 100% 100%;
+    }
   }
 
   .__flex-align-center {
     @include mobile_s {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    @include mobile_m {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    @include mobile_l {
       flex-direction: column;
       gap: 1.25rem;
     }
@@ -58,6 +110,14 @@
       margin-top: 1.25rem;
     }
 
+    @include mobile_m {
+      margin-top: 1.25rem;
+    }
+
+    @include mobile_l {
+      margin-top: 1.25rem;
+    }
+
     form {
       background: $cosmicCobalt;
       border-radius: 0.3125rem;
@@ -65,6 +125,16 @@
       position: relative;
 
       @include mobile_s {
+        padding: 0.75rem;
+        width: 100%;
+      }
+
+      @include mobile_m {
+        padding: 0.75rem;
+        width: 100%;
+      }
+
+      @include mobile_l {
         padding: 0.75rem;
         width: 100%;
       }
@@ -89,6 +159,14 @@
           @include mobile_s {
             font-size: 1rem;
           }
+
+          @include mobile_m {
+            font-size: 1rem;
+          }
+
+          @include mobile_l {
+            font-size: 1rem;
+          }
         }
 
         input,
@@ -101,6 +179,14 @@
           padding: 0.25rem 0.5rem;
 
           @include mobile_s {
+            width: 100%;
+          }
+
+          @include mobile_m {
+            width: 100%;
+          }
+
+          @include mobile_l {
             width: 100%;
           }
         }
@@ -146,6 +232,16 @@
           width: 100%;
           margin-top: 1.25rem;
         }
+
+        @include mobile_m {
+          width: 100%;
+          margin-top: 1.25rem;
+        }
+
+        @include mobile_l {
+          width: 100%;
+          margin-top: 1.25rem;
+        }
       }
     }
 
@@ -186,6 +282,22 @@
         grid-template-areas: "__phone __cellphone" "__email __email" "__address __address" "__social-media __social-media";
       }
 
+      @include mobile_m {
+        width: 100%;
+        display: grid;
+        row-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "__phone __cellphone" "__email __email" "__address __address" "__social-media __social-media";
+      }
+
+      @include mobile_l {
+        width: 100%;
+        display: grid;
+        row-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "__phone __cellphone" "__email __email" "__address __address" "__social-media __social-media";
+      }
+
       .__info-contact {
         display: flex;
         gap: 1.25rem;
@@ -196,14 +308,60 @@
           align-items: center;
           margin-top: 0rem;
           text-align: center;
+          gap: 0;
 
           &:nth-child(4) {
             padding: 0 1rem;
+            gap: 0.75rem;
+
+            span {
+              line-height: normal;
+            }
+          }
+        }
+
+        @include mobile_m {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 0rem;
+          text-align: center;
+          gap: 0;
+
+          &:nth-child(4) {
+            padding: 0 1rem;
+            gap: 0.75rem;
+
+            span {
+              line-height: normal;
+            }
+          }
+        }
+
+        @include mobile_l {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 0rem;
+          text-align: center;
+          gap: 0;
+
+          &:nth-child(4) {
+            padding: 0 1rem;
+            gap: 0.75rem;
+
+            span {
+              line-height: normal;
+            }
           }
         }
 
         &:first-child {
           margin-top: 0;
+        }
+
+        svg {
+          width: 1.75rem;
+          height: 1.75rem;
+          object-fit: fill;
         }
 
         span {
@@ -216,6 +374,14 @@
           );
 
           @include mobile_s {
+            font-size: 1rem;
+          }
+
+          @include mobile_m {
+            font-size: 1rem;
+          }
+
+          @include mobile_l {
             font-size: 1rem;
           }
         }

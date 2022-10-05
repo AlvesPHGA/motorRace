@@ -6,29 +6,38 @@
     padding-block: 1.25rem;
   }
 
-  h2 {
-    &::before {
-      content: "";
+  @include mobile_m {
+    padding-block: 1.25rem;
+  }
+
+  @include mobile_l {
+    padding-block: 1.25rem;
+  }
+
+  .__title {
+    &::before,
+    &::after {
       width: 40vw;
-      height: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: $darkImperialBlue;
-      position: absolute;
-      left: 0;
-      border-radius: 0 1.25rem 1.25rem 0;
+    }
+    @include mobile_s {
+      &::before,
+      &::after {
+        width: 36vw;
+      }
     }
 
-    &::after {
-      content: "";
-      width: 40vw;
-      height: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: $darkImperialBlue;
-      position: absolute;
-      right: 0;
-      border-radius: 1.25rem 0 0 1.25rem;
+    @include mobile_m {
+      &::before,
+      &::after {
+        width: 36vw;
+      }
+    }
+
+    @include mobile_l {
+      &::before,
+      &::after {
+        width: 36vw;
+      }
     }
   }
 
@@ -42,6 +51,16 @@
       overflow: hidden;
 
       @include mobile_s {
+        height: 10rem;
+        margin: 1rem 0;
+      }
+
+      @include mobile_m {
+        height: 10rem;
+        margin: 1rem 0;
+      }
+
+      @include mobile_l {
         height: 10rem;
         margin: 1rem 0;
       }
@@ -62,6 +81,14 @@
           height: 9.5rem;
         }
 
+        @include mobile_m {
+          height: 9.5rem;
+        }
+
+        @include mobile_l {
+          height: 9.5rem;
+        }
+
         .__card {
           height: 100%;
           width: 20rem;
@@ -69,6 +96,14 @@
           scroll-snap-align: center;
 
           @include mobile_s {
+            width: 11.25rem;
+          }
+
+          @include mobile_m {
+            width: 11.25rem;
+          }
+
+          @include mobile_l {
             width: 11.25rem;
           }
 
@@ -94,6 +129,14 @@
         transition: all 0.8s ease;
 
         @include mobile_s {
+          display: none;
+        }
+
+        @include mobile_m {
+          display: none;
+        }
+
+        @include mobile_l {
           display: none;
         }
 
@@ -148,7 +191,7 @@
       &::before {
         content: "";
         width: 15vw;
-        height: 0.3125rem;
+        height: 0.25rem;
         top: 50%;
         transform: translateY(-50%);
         background: $darkImperialBlue;
@@ -160,13 +203,40 @@
       &::after {
         content: "";
         width: 15vw;
-        height: 0.3125rem;
+        height: 0.25rem;
         top: 50%;
         transform: translateY(-50%);
         background: $darkImperialBlue;
         position: absolute;
         right: 12.5rem;
         border-radius: 1.25rem;
+      }
+
+      @include mobile_s {
+        &::before {
+          left: 12rem;
+        }
+        &::after {
+          right: 12rem;
+        }
+      }
+
+      @include mobile_m {
+        &::before {
+          left: 13rem;
+        }
+        &::after {
+          right: 13rem;
+        }
+      }
+
+      @include mobile_l {
+        &::before {
+          left: 14.5rem;
+        }
+        &::after {
+          right: 14.5rem;
+        }
       }
     }
 
@@ -190,6 +260,14 @@
       }
 
       @include mobile_s {
+        display: none;
+      }
+
+      @include mobile_m {
+        display: none;
+      }
+
+      @include mobile_l {
         display: none;
       }
     }

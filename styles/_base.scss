@@ -23,12 +23,28 @@ h2 {
   @include mobile_s {
     font-size: 1.25rem;
   }
+
+  @include mobile_m {
+    font-size: 1.25rem;
+  }
+
+  @include mobile_l {
+    font-size: 1.25rem;
+  }
 }
 
 h3 {
   font-size: 2.5rem;
 
   @include mobile_s {
+    font-size: 1.12rem;
+  }
+
+  @include mobile_m {
+    font-size: 1.12rem;
+  }
+
+  @include mobile_l {
     font-size: 1.12rem;
   }
 }

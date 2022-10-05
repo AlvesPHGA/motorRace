@@ -36,6 +36,41 @@
         background-size: 100% 100%;
       }
 
+      @include mobile_m {
+        background: url("../../../../images/jpg/imgSubheader-mobile.jpg") center
+          no-repeat;
+        background-size: 100% 100%;
+      }
+
+      @include mobile_l {
+        background: url("../../../../images/jpg/imgSubheader-mobile.jpg") center
+          no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .__title {
+        @include mobile_s {
+          &::before,
+          &::after {
+            width: 28vw;
+          }
+        }
+
+        @include mobile_m {
+          &::before,
+          &::after {
+            width: 28vw;
+          }
+        }
+
+        @include mobile_l {
+          &::before,
+          &::after {
+            width: 28vw;
+          }
+        }
+      }
+
       p {
         @include text(
           $f_size: 1.25rem,
@@ -48,6 +83,20 @@
         margin: 1rem auto 1.25rem;
 
         @include mobile_s {
+          width: 100%;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          padding: 0 1rem;
+        }
+
+        @include mobile_m {
+          width: 100%;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          padding: 0 1rem;
+        }
+
+        @include mobile_l {
           width: 100%;
           font-size: 1rem;
           line-height: 1.5rem;

@@ -3,6 +3,14 @@
     display: block;
   }
 
+  @include mobile_m {
+    display: block;
+  }
+
+  @include mobile_l {
+    display: block;
+  }
+
   display: none;
   height: 11.25rem;
   width: 100%;

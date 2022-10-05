@@ -8,11 +8,29 @@
     height: fit-content;
   }
 
+  @include mobile_m {
+    display: block;
+    height: fit-content;
+  }
+
+  @include mobile_l {
+    display: block;
+    height: fit-content;
+  }
+
   .__back-image {
     background: url("../../../../images/jpg/about.jpg") center no-repeat;
     background-size: cover;
 
     @include mobile_s {
+      display: none;
+    }
+
+    @include mobile_m {
+      display: none;
+    }
+
+    @include mobile_l {
       display: none;
     }
   }
@@ -29,6 +47,16 @@
       padding: 1.25rem 1rem;
     }
 
+    @include mobile_m {
+      width: 100%;
+      padding: 1.25rem 1rem;
+    }
+
+    @include mobile_l {
+      width: 100%;
+      padding: 1.25rem 1rem;
+    }
+
     h2 {
       color: $white;
       margin-bottom: 1.25rem;
@@ -37,10 +65,18 @@
         margin-bottom: 1rem;
       }
 
+      @include mobile_m {
+        margin-bottom: 1rem;
+      }
+
+      @include mobile_l {
+        margin-bottom: 1rem;
+      }
+
       &::before {
         content: "";
         width: 5.5rem;
-        height: 5px;
+        height: 0.25rem;
         top: 50%;
         transform: translateY(-50%);
         background: $white;
@@ -52,13 +88,34 @@
       &::after {
         content: "";
         width: 5.5rem;
-        height: 5px;
+        height: 0.25rem;
         top: 50%;
         transform: translateY(-50%);
         background: $white;
         position: absolute;
         right: 110%;
         border-radius: 1.25rem;
+      }
+
+      @include mobile_s {
+        &::before,
+        &::after {
+          width: 36vw;
+        }
+      }
+
+      @include mobile_m {
+        &::before,
+        &::after {
+          width: 36vw;
+        }
+      }
+
+      @include mobile_l {
+        &::before,
+        &::after {
+          width: 36vw;
+        }
       }
     }
 
@@ -73,6 +130,18 @@
       width: 34.75rem;
 
       @include mobile_s {
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      @include mobile_m {
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      @include mobile_l {
         width: 100%;
         font-size: 1rem;
         text-align: center;

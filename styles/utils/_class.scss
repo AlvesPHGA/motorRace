@@ -13,12 +13,14 @@
     width: 100%;
     margin: 0;
     padding: 0 15px;
+    height: 100%;
   }
 
   @include mobile_l {
     width: 100%;
     margin: 0;
     padding: 0 15px;
+    height: 100%;
   }
 }
 
@@ -28,7 +30,7 @@
   &::before {
     content: "";
     width: 35vw;
-    height: 5px;
+    height: 0.25rem;
     top: 50%;
     transform: translateY(-50%);
     background: $darkImperialBlue;
@@ -40,7 +42,7 @@
   &::after {
     content: "";
     width: 35vw;
-    height: 5px;
+    height: 0.25rem;
     top: 50%;
     transform: translateY(-50%);
     background: $darkImperialBlue;
@@ -50,6 +52,20 @@
   }
 
   @include mobile_s {
+    &::before,
+    &::after {
+      width: 25vw;
+    }
+  }
+
+  @include mobile_m {
+    &::before,
+    &::after {
+      width: 25vw;
+    }
+  }
+
+  @include mobile_l {
     &::before,
     &::after {
       width: 25vw;
