@@ -2,6 +2,7 @@
   display: none;
   width: 3rem;
   position: relative;
+  height: 1.25rem;
 
   @include mobile_s {
     display: block;
@@ -19,51 +20,42 @@
     height: 0.25rem;
     background: $white;
     width: 100%;
+    top: 0;
+    transition: rotate 0.3s ease;
 
     &:before {
       position: absolute;
       content: "";
       height: 0.25rem;
-      top: 0.5rem;
       width: 100%;
+      left: 0;
       background: $white;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     &::after {
       position: absolute;
       content: "";
       height: 0.25rem;
-      bottom: 0.5rem;
-      width: 100%;
-      background: $white;
-    }
-  }
-}
-
-.__menu-hamburger-active {
-  .__box {
-    height: 0.25rem;
-    background: transparent;
-    width: 100%;
-
-    &:before {
-      position: absolute;
-      content: "";
-      height: 0.25rem;
-      transform: rotate(45deg);
-      top: 0;
+      bottom: 0;
       width: 100%;
       background: $white;
     }
 
-    &::after {
-      position: absolute;
-      content: "";
-      height: 0.25rem;
-      transform: rotate(140deg);
-      top: 0;
-      width: 100%;
-      background: $white;
+    &.__active {
+      background-color: transparent;
+      bottom: 0;
+
+      &:before {
+        transform: rotate(45deg) translateY(-50%);
+        top: 50%;
+      }
+
+      &::after {
+        transform: rotate(140deg) translateY(-50%);
+        bottom: 50%;
+      }
     }
   }
 }
