@@ -19,6 +19,7 @@
     &::after {
       width: 40vw;
     }
+
     @include mobile_s {
       &::before,
       &::after {
