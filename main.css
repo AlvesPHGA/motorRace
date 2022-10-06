@@ -1711,8 +1711,7 @@ h3 {
   height: 0.25rem;
   background: #ffffff;
   width: 100%;
-  top: 0;
-  transition: rotate 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 .__menu-hamburger .__box:before {
   position: absolute;
@@ -1723,6 +1722,7 @@ h3 {
   background: #ffffff;
   top: 50%;
   transform: translateY(-50%);
+  transition: background 0.3s ease-in-out;
 }
 .__menu-hamburger .__box::after {
   position: absolute;
@@ -1731,16 +1731,17 @@ h3 {
   bottom: 0;
   width: 100%;
   background: #ffffff;
+  transition: transform 0.3s ease-in-out;
 }
 .__menu-hamburger .__box.__active {
-  background-color: transparent;
-  bottom: 0;
+  transform: rotate(45deg);
+  top: 0;
+  transition: 0.4s ease-in-out;
 }
 .__menu-hamburger .__box.__active:before {
-  transform: rotate(45deg) translateY(-50%);
-  top: 50%;
+  background-color: transparent;
 }
 .__menu-hamburger .__box.__active::after {
-  transform: rotate(140deg) translateY(-50%);
-  bottom: 50%;
+  transform: rotate(90deg);
+  bottom: 0;
 }/*# sourceMappingURL=main.css.map */
