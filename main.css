@@ -964,33 +964,36 @@ h3 {
 @media (max-width: 320px) {
   .__support .__box-support .__card {
     height: 12rem;
+    padding-block: 0.5rem;
   }
 }
 @media (min-width: 321px) and (max-width: 375px) {
   .__support .__box-support .__card {
     height: 12rem;
+    padding-block: 0.5rem;
   }
 }
 @media (min-width: 376px) and (max-width: 425px) {
   .__support .__box-support .__card {
     height: 12rem;
+    padding-block: 0.5rem;
   }
 }
-.__support .__box-support .__card:hover {
+.__support .__box-support .__card.__active, .__support .__box-support .__card:hover {
   background-color: rgba(11, 19, 112, 0.7);
   border-color: #0b1370;
 }
-.__support .__box-support .__card:hover .__box-two {
+.__support .__box-support .__card.__active .__box-two, .__support .__box-support .__card:hover .__box-two {
   display: flex;
   top: inherit;
   -webkit-animation: showContent 0.6s 0.6s forwards, moveTop 0.5s linear forwards;
           animation: showContent 0.6s 0.6s forwards, moveTop 0.5s linear forwards;
 }
-.__support .__box-support .__card:hover .__box-two .__legend {
+.__support .__box-support .__card.__active .__box-two .__legend, .__support .__box-support .__card:hover .__box-two .__legend {
   -webkit-animation: showContent 1s forwards, moveTop 0.8s ease-in forwards;
           animation: showContent 1s forwards, moveTop 0.8s ease-in forwards;
 }
-.__support .__box-support .__card:hover .__box-two .__text-card {
+.__support .__box-support .__card.__active .__box-two .__text-card, .__support .__box-support .__card:hover .__box-two .__text-card {
   -webkit-animation: showContent 1s forwards, moveTop 0.8s ease-in forwards;
           animation: showContent 1s forwards, moveTop 0.8s ease-in forwards;
 }
@@ -1047,6 +1050,21 @@ h3 {
   position: absolute;
   padding-top: 2.5rem;
   visibility: hidden;
+}
+@media (max-width: 320px) {
+  .__support .__box-support .__card .__box-two {
+    padding: 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .__support .__box-support .__card .__box-two {
+    padding: 0;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .__support .__box-support .__card .__box-two {
+    padding: 0;
+  }
 }
 .__support .__box-support .__card .__box-two .__legend {
   color: #ffffff;

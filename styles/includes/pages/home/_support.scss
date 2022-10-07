@@ -91,16 +91,20 @@
 
       @include mobile_s {
         height: 12rem;
+        padding-block: 0.5rem;
       }
 
       @include mobile_m {
         height: 12rem;
+        padding-block: 0.5rem;
       }
 
       @include mobile_l {
         height: 12rem;
+        padding-block: 0.5rem;
       }
 
+      &.__active,
       &:hover {
         background-color: rgba($color: $darkImperialBlue, $alpha: 0.7);
         border-color: $darkImperialBlue;
@@ -159,6 +163,18 @@
         position: absolute;
         padding-top: 2.5rem;
         visibility: hidden;
+
+        @include mobile_s {
+          padding: 0;
+        }
+
+        @include mobile_m {
+          padding: 0;
+        }
+
+        @include mobile_l {
+          padding: 0;
+        }
 
         .__legend {
           color: $white;
