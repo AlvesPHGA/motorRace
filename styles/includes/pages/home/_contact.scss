@@ -23,7 +23,7 @@
     &::before,
     &::after {
       background: $white;
-      width: 40vw;
+      width: 0vw;
 
       @include mobile_s {
         width: 35vw;
@@ -35,6 +35,22 @@
 
       @include mobile_l {
         width: 35vw;
+      }
+    }
+
+    &.__active {
+      &::before,
+      &::after {
+        animation: line 0.6s linear forwards;
+      }
+    }
+
+    @keyframes line {
+      from {
+        width: 0vw;
+      }
+      to {
+        width: 40vw;
       }
     }
   }

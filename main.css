@@ -637,7 +637,27 @@ h3 {
   }
 }
 .__motos-brands .__title::before, .__motos-brands .__title::after {
-  width: 40vw;
+  width: 0vw;
+}
+.__motos-brands .__title.__active::before, .__motos-brands .__title.__active::after {
+  -webkit-animation: line 0.6s linear forwards;
+          animation: line 0.6s linear forwards;
+}
+@-webkit-keyframes line {
+  from {
+    width: 0vw;
+  }
+  to {
+    width: 40vw;
+  }
+}
+@keyframes line {
+  from {
+    width: 0vw;
+  }
+  to {
+    width: 40vw;
+  }
 }
 @media (max-width: 320px) {
   .__motos-brands .__title::before, .__motos-brands .__title::after {
@@ -908,7 +928,19 @@ h3 {
   }
 }
 .__support .__title::before, .__support .__title::after {
-  width: 40vw;
+  width: 0vw;
+}
+.__support .__title.__active::before, .__support .__title.__active::after {
+  -webkit-animation: line 0.6s linear forwards;
+          animation: line 0.6s linear forwards;
+}
+@keyframes line {
+  from {
+    width: 0vw;
+  }
+  to {
+    width: 40vw;
+  }
 }
 @media (max-width: 320px) {
   .__support .__title::before, .__support .__title::after {
@@ -1131,7 +1163,7 @@ h3 {
 }
 .__contact .__title::before, .__contact .__title::after {
   background: #ffffff;
-  width: 40vw;
+  width: 0vw;
 }
 @media (max-width: 320px) {
   .__contact .__title::before, .__contact .__title::after {
@@ -1146,6 +1178,18 @@ h3 {
 @media (min-width: 376px) and (max-width: 425px) {
   .__contact .__title::before, .__contact .__title::after {
     width: 35vw;
+  }
+}
+.__contact .__title.__active::before, .__contact .__title.__active::after {
+  -webkit-animation: line 0.6s linear forwards;
+          animation: line 0.6s linear forwards;
+}
+@keyframes line {
+  from {
+    width: 0vw;
+  }
+  to {
+    width: 40vw;
   }
 }
 .__contact .__back-img {
