@@ -957,10 +957,9 @@ h3 {
   border: 0.3125rem solid #ffffff;
   border-radius: 0.3125rem;
   padding-block: 2.5rem;
-  flex-direction: column;
-  justify-content: space-around;
+  position: relative;
   cursor: pointer;
-  transition: all 0.7s ease;
+  transition: all 0.9s ease-in-out;
 }
 @media (max-width: 320px) {
   .__support .__box-support .__card {
@@ -980,15 +979,79 @@ h3 {
 .__support .__box-support .__card:hover {
   background-color: rgba(11, 19, 112, 0.7);
   border-color: #0b1370;
+}
+.__support .__box-support .__card:hover .__box-two {
+  display: flex;
+  top: inherit;
+  -webkit-animation: showContent 0.6s 0.6s forwards, moveTop 0.5s linear forwards;
+          animation: showContent 0.6s 0.6s forwards, moveTop 0.5s linear forwards;
+}
+.__support .__box-support .__card:hover .__box-two .__legend {
+  -webkit-animation: showContent 1s forwards, moveTop 0.8s ease-in forwards;
+          animation: showContent 1s forwards, moveTop 0.8s ease-in forwards;
+}
+.__support .__box-support .__card:hover .__box-two .__text-card {
+  -webkit-animation: showContent 1s forwards, moveTop 0.8s ease-in forwards;
+          animation: showContent 1s forwards, moveTop 0.8s ease-in forwards;
+}
+@-webkit-keyframes moveTop {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+@keyframes moveTop {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+@-webkit-keyframes showContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes showContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.__support .__box-support .__card .__box-one {
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+.__support .__box-support .__card .__box-two {
+  pointer-events: none;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  padding-top: 2.5rem;
+  visibility: hidden;
+}
+.__support .__box-support .__card .__box-two .__legend {
   color: #ffffff;
 }
-.__support .__box-support .__card:hover .__icon {
-  display: none;
-}
-.__support .__box-support .__card:hover .__legend {
-  color: #ffffff;
-}
-.__support .__box-support .__card:hover .__text-card {
+.__support .__box-support .__card .__box-two .__text-card {
   display: block;
 }
 .__support .__box-support .__card .__legend {
