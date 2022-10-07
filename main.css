@@ -993,6 +993,62 @@ h3 {
   cursor: pointer;
   transition: all 0.9s ease-in-out;
 }
+.__support .__box-support .__card:nth-child(1) {
+  opacity: 0;
+  visibility: hidden;
+}
+.__support .__box-support .__card:nth-child(1).__active {
+  -webkit-animation: toRight 0.7s ease-in forwards;
+          animation: toRight 0.7s ease-in forwards;
+}
+.__support .__box-support .__card:nth-child(3) {
+  opacity: 0;
+  visibility: hidden;
+}
+.__support .__box-support .__card:nth-child(3).__active {
+  -webkit-animation: toLeft 0.7s ease-in forwards;
+          animation: toLeft 0.7s ease-in forwards;
+}
+@-webkit-keyframes toRight {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes toRight {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@-webkit-keyframes toLeft {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes toLeft {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+}
 @media (max-width: 320px) {
   .__support .__box-support .__card {
     height: 12rem;

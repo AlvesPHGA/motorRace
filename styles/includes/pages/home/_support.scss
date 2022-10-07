@@ -106,11 +106,45 @@
       cursor: pointer;
       transition: all 0.9s ease-in-out;
 
-      // &.__active-card {
-      //   .__box-two {
-      //     color: red;
-      //   }
-      // }
+      &:nth-child(1) {
+        opacity: 0;
+        visibility: hidden;
+
+        &.__active {
+          animation: toRight 0.7s ease-in forwards;
+        }
+      }
+
+      &:nth-child(3) {
+        opacity: 0;
+        visibility: hidden;
+
+        &.__active {
+          animation: toLeft 0.7s ease-in forwards;
+        }
+      }
+
+      @keyframes toRight {
+        from {
+          left: -100%;
+        }
+        to {
+          left: 0;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      @keyframes toLeft {
+        from {
+          right: -100%;
+        }
+        to {
+          right: 0;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
 
       @include mobile_s {
         height: 12rem;
