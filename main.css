@@ -979,21 +979,21 @@ h3 {
     padding-block: 0.5rem;
   }
 }
-.__support .__box-support .__card.__active, .__support .__box-support .__card:hover {
+.__support .__box-support .__card:hover {
   background-color: rgba(11, 19, 112, 0.7);
   border-color: #0b1370;
 }
-.__support .__box-support .__card.__active .__box-two, .__support .__box-support .__card:hover .__box-two {
+.__support .__box-support .__card:hover .__box-two {
   display: flex;
   top: inherit;
   -webkit-animation: showContent 0.6s 0.6s forwards, moveTop 0.5s linear forwards;
           animation: showContent 0.6s 0.6s forwards, moveTop 0.5s linear forwards;
 }
-.__support .__box-support .__card.__active .__box-two .__legend, .__support .__box-support .__card:hover .__box-two .__legend {
+.__support .__box-support .__card:hover .__box-two .__legend {
   -webkit-animation: showContent 1s forwards, moveTop 0.8s ease-in forwards;
           animation: showContent 1s forwards, moveTop 0.8s ease-in forwards;
 }
-.__support .__box-support .__card.__active .__box-two .__text-card, .__support .__box-support .__card:hover .__box-two .__text-card {
+.__support .__box-support .__card:hover .__box-two .__text-card {
   -webkit-animation: showContent 1s forwards, moveTop 0.8s ease-in forwards;
           animation: showContent 1s forwards, moveTop 0.8s ease-in forwards;
 }

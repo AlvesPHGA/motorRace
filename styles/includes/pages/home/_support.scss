@@ -89,6 +89,12 @@
       cursor: pointer;
       transition: all 0.9s ease-in-out;
 
+      // &.__active-card {
+      //   .__box-two {
+      //     color: red;
+      //   }
+      // }
+
       @include mobile_s {
         height: 12rem;
         padding-block: 0.5rem;
@@ -104,7 +110,6 @@
         padding-block: 0.5rem;
       }
 
-      &.__active,
       &:hover {
         background-color: rgba($color: $darkImperialBlue, $alpha: 0.7);
         border-color: $darkImperialBlue;
