@@ -703,18 +703,21 @@ h3 {
   .__motos-brands .__motos .__slider-motos {
     height: 10rem;
     margin: 1rem 0;
+    padding: 0;
   }
 }
 @media (min-width: 321px) and (max-width: 375px) {
   .__motos-brands .__motos .__slider-motos {
     height: 10rem;
     margin: 1rem 0;
+    padding: 0;
   }
 }
 @media (min-width: 376px) and (max-width: 425px) {
   .__motos-brands .__motos .__slider-motos {
     height: 10rem;
     margin: 1rem 0;
+    padding: 0;
   }
 }
 .__motos-brands .__motos .__slider-motos .__slider-content {
@@ -730,17 +733,17 @@ h3 {
 }
 @media (max-width: 320px) {
   .__motos-brands .__motos .__slider-motos .__slider-content {
-    height: 9.5rem;
+    position: absolute;
   }
 }
 @media (min-width: 321px) and (max-width: 375px) {
   .__motos-brands .__motos .__slider-motos .__slider-content {
-    height: 9.5rem;
+    position: absolute;
   }
 }
 @media (min-width: 376px) and (max-width: 425px) {
   .__motos-brands .__motos .__slider-motos .__slider-content {
-    height: 9.5rem;
+    position: absolute;
   }
 }
 .__motos-brands .__motos .__slider-motos .__slider-content .__card {
