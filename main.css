@@ -643,6 +643,24 @@ h3 {
   -webkit-animation: line 0.6s linear forwards;
           animation: line 0.6s linear forwards;
 }
+@media (max-width: 320px) {
+  .__motos-brands .__title.__active::before, .__motos-brands .__title.__active::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .__motos-brands .__title.__active::before, .__motos-brands .__title.__active::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .__motos-brands .__title.__active::before, .__motos-brands .__title.__active::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
 @-webkit-keyframes line {
   from {
     width: 0vw;
@@ -933,6 +951,24 @@ h3 {
 .__support .__title.__active::before, .__support .__title.__active::after {
   -webkit-animation: line 0.6s linear forwards;
           animation: line 0.6s linear forwards;
+}
+@media (max-width: 320px) {
+  .__support .__title.__active::before, .__support .__title.__active::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .__support .__title.__active::before, .__support .__title.__active::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .__support .__title.__active::before, .__support .__title.__active::after {
+    -webkit-animation: none;
+            animation: none;
+  }
 }
 @keyframes line {
   from {
@@ -1265,6 +1301,24 @@ h3 {
 .__contact .__title.__active::before, .__contact .__title.__active::after {
   -webkit-animation: line 0.6s linear forwards;
           animation: line 0.6s linear forwards;
+}
+@media (max-width: 320px) {
+  .__contact .__title.__active::before, .__contact .__title.__active::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .__contact .__title.__active::before, .__contact .__title.__active::after {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .__contact .__title.__active::before, .__contact .__title.__active::after {
+    -webkit-animation: none;
+            animation: none;
+  }
 }
 @keyframes line {
   from {
