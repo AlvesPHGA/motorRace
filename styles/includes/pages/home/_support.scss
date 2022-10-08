@@ -115,6 +115,15 @@
         }
       }
 
+      &:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+
+        &.__active {
+          animation: show 0.7s ease-in forwards;
+        }
+      }
+
       &:nth-child(3) {
         opacity: 0;
         visibility: hidden;
@@ -130,6 +139,16 @@
         }
         to {
           left: 0;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      @keyframes show {
+        from {
+          opacity: 0;
+        }
+        to {
           opacity: 1;
           visibility: visible;
         }
