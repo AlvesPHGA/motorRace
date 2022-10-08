@@ -695,8 +695,8 @@ h3 {
 .__motos-brands .__motos .__slider-motos {
   position: relative;
   height: 20rem;
-  position: relative;
   margin: 2.5rem 0;
+  padding-block: 1.75rem;
   overflow: hidden;
 }
 @media (max-width: 320px) {
@@ -718,15 +718,13 @@ h3 {
   }
 }
 .__motos-brands .__motos .__slider-motos .__slider-content {
-  position: absolute;
-  height: 17.5rem;
+  height: 100%;
   display: flex;
   flex-flow: row nowrap;
   padding: 0 1.25rem;
   gap: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%);
   scroll-behavior: smooth;
+  overflow: hidden;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
 }
@@ -809,6 +807,9 @@ h3 {
 }
 .__motos-brands .__motos .__slider-motos .__btn:hover svg path {
   stroke: #a00010;
+}
+.__motos-brands .__motos .__slider-motos .__btn.__desabled {
+  pointer-events: none;
 }
 .__motos-brands .__motos .__slider-motos .__previous.__desbled-button,
 .__motos-brands .__motos .__slider-motos .__next.__desbled-button {

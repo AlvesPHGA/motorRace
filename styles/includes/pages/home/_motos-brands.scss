@@ -84,8 +84,8 @@
     .__slider-motos {
       position: relative;
       height: 20rem;
-      position: relative;
       margin: 2.5rem 0;
+      padding-block: 1.75rem;
       overflow: hidden;
 
       @include mobile_s {
@@ -104,15 +104,13 @@
       }
 
       .__slider-content {
-        position: absolute;
-        height: 17.5rem;
+        height: 100%;
         display: flex;
         flex-flow: row nowrap;
         padding: 0 1.25rem;
         gap: 1.25rem;
-        top: 50%;
-        transform: translateY(-50%);
         scroll-behavior: smooth;
+        overflow: hidden;
         scroll-snap-type: x mandatory;
 
         @include mobile_s {
@@ -192,6 +190,10 @@
               stroke: rgba($color: $carmine, $alpha: 1);
             }
           }
+        }
+
+        &.__desabled {
+          pointer-events: none;
         }
       }
 
