@@ -1,5 +1,6 @@
 import ActiveMenuHamburger from "./script/active-menu-hanburger.js";
 import AnimaScroll from "./script/anima-scroll.js";
+import Modal from "./script/modal.js";
 import SliderScroll from "./script/slider-scroll.js";
 
 const menu_hanburger = new ActiveMenuHamburger(".__menu-hamburger");
@@ -13,3 +14,6 @@ const slider_scroll = new SliderScroll(
   ".__slider-content"
 );
 slider_scroll.init();
+
+const modal_card = new Modal("[data-modal]", ".__close-modal");
+modal_card.init();
