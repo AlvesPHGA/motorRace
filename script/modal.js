@@ -12,14 +12,19 @@ export default class Modal {
     this.close.addEventListener("click", this.openCloseModal);
   }
 
-  openCloseModal() {
+  openCloseModal(item) {
     const modal = document.querySelector(".__modal");
+    const image = item.path[0].src;
+
     modal.classList.toggle("__active");
+    console.log(item);
+    this.contentModal(image);
   }
 
-  closeModal() {
-    const close = document.querySelector(".__close-modal");
-    close.addEventListener;
+  contentModal(element) {
+    const content = document.querySelector(".__modal-content");
+
+    content.innerHTML = `<img class = '__image-modal' src = '${element}'>`;
   }
 
   eventBind() {
