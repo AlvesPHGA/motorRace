@@ -2064,4 +2064,8 @@ h3 {
 .__menu-hamburger .__box.__active::after {
   transform: rotate(90deg);
   bottom: 0;
+}
+
+.__modal {
+  background: rgba(0, 0, 0, 0.6);
 }/*# sourceMappingURL=main.css.map */
