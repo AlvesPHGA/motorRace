@@ -17,7 +17,6 @@ export default class Modal {
     const image = item.path[0].src;
 
     modal.classList.toggle("__active");
-    console.log(item);
     this.contentModal(image);
   }
 
