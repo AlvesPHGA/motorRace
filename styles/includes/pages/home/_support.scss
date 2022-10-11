@@ -97,6 +97,8 @@
   .__box-support {
     justify-content: space-between;
     margin-top: 1.75rem;
+    position: relative;
+    overflow: hidden;
 
     @include mobile_s {
       margin-top: 1rem;

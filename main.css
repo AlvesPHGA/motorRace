@@ -68,6 +68,7 @@ h3 {
 .__width-1200 {
   width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 @media (max-width: 320px) {
   .__width-1200 {
@@ -1014,6 +1015,8 @@ h3 {
 .__support .__box-support {
   justify-content: space-between;
   margin-top: 1.75rem;
+  position: relative;
+  overflow: hidden;
 }
 @media (max-width: 320px) {
   .__support .__box-support {
