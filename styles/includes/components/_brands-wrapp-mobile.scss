@@ -1,19 +1,23 @@
 .__brands-wrapp-mobile {
   @include mobile_s {
-    display: block;
+    display: flex;
+    flex-flow: row nowrap;
   }
 
   @include mobile_m {
-    display: block;
+    display: flex;
+    flex-flow: row nowrap;
   }
 
   @include mobile_l {
-    display: block;
+    display: flex;
+    flex-flow: row nowrap;
   }
 
   display: none;
   height: 11.25rem;
   width: 100%;
+  overflow: hidden;
 
   .__brands-items {
     display: grid;

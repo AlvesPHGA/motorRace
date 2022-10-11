@@ -110,7 +110,7 @@
         height: 16rem;
         display: flex;
         flex-flow: row nowrap;
-        padding: 0.75rem 1.25rem;
+        padding: 0.75rem 0;
         gap: 1.25rem;
         scroll-behavior: smooth;
         overflow: hidden;
@@ -118,14 +118,17 @@
 
         @include mobile_s {
           position: absolute;
+          height: 100%;
         }
 
         @include mobile_m {
           position: absolute;
+          height: 100%;
         }
 
         @include mobile_l {
           position: absolute;
+          height: 100%;
         }
 
         .__card {

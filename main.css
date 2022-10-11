@@ -728,7 +728,7 @@ h3 {
   height: 16rem;
   display: flex;
   flex-flow: row nowrap;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 0;
   gap: 1.25rem;
   scroll-behavior: smooth;
   overflow: hidden;
@@ -738,16 +738,19 @@ h3 {
 @media (max-width: 320px) {
   .__motos-brands .__motos .__slider-motos .__slider-content {
     position: absolute;
+    height: 100%;
   }
 }
 @media (min-width: 321px) and (max-width: 375px) {
   .__motos-brands .__motos .__slider-motos .__slider-content {
     position: absolute;
+    height: 100%;
   }
 }
 @media (min-width: 376px) and (max-width: 425px) {
   .__motos-brands .__motos .__slider-motos .__slider-content {
     position: absolute;
+    height: 100%;
   }
 }
 .__motos-brands .__motos .__slider-motos .__slider-content .__card {
@@ -1974,20 +1977,24 @@ h3 {
   display: none;
   height: 11.25rem;
   width: 100%;
+  overflow: hidden;
 }
 @media (max-width: 320px) {
   .__brands-wrapp-mobile {
-    display: block;
+    display: flex;
+    flex-flow: row nowrap;
   }
 }
 @media (min-width: 321px) and (max-width: 375px) {
   .__brands-wrapp-mobile {
-    display: block;
+    display: flex;
+    flex-flow: row nowrap;
   }
 }
 @media (min-width: 376px) and (max-width: 425px) {
   .__brands-wrapp-mobile {
-    display: block;
+    display: flex;
+    flex-flow: row nowrap;
   }
 }
 .__brands-wrapp-mobile .__brands-items {
