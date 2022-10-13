@@ -14,11 +14,24 @@
     height: fit-content;
     display: flex;
     gap: 0.75rem;
+    position: relative;
 
     .__modal-content {
       width: 30vw;
       border-radius: 0.3125rem;
       flex-shrink: 0;
+
+      @include mobile_s {
+        width: 85vw;
+      }
+
+      @include mobile_m {
+        width: 85vw;
+      }
+
+      @include mobile_l {
+        width: 85vw;
+      }
 
       .__image-modal {
         width: 100%;
@@ -32,12 +45,12 @@
       display: inline-block;
       height: fit-content;
       text-transform: uppercase;
-      padding: 0.25rem 0.5rem;
       border: none;
-      border-radius: 0.3125rem;
       transition: 0.6s ease;
       cursor: pointer;
-      letter-spacing: 0.125rem;
+      border-radius: 100%;
+      text-align: center;
+      padding: 0.25rem 0.75rem;
 
       @include btn_link(
         $f_size: 1.25rem,
@@ -45,6 +58,24 @@
         $color: $darkImperialBlue,
         $l_height: normal
       );
+
+      @include mobile_s {
+        position: absolute;
+        bottom: 90%;
+        left: 94%;
+      }
+
+      @include mobile_m {
+        position: absolute;
+        bottom: 90%;
+        left: 94%;
+      }
+
+      @include mobile_l {
+        position: absolute;
+        bottom: 90%;
+        left: 94%;
+      }
 
       &:hover {
         background-color: $darkImperialBlue;
