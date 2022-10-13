@@ -1981,6 +1981,7 @@ h3 {
   display: none;
   height: 11.25rem;
   width: 100%;
+  border: 1px solid red;
 }
 @media (max-width: 320px) {
   .__brands-wrapp-mobile {
