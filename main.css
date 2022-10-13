@@ -1791,19 +1791,16 @@ h3 {
 @media (max-width: 320px) {
   .__footer {
     padding: 1.25rem 1rem;
-    display: initial;
   }
 }
 @media (min-width: 321px) and (max-width: 375px) {
   .__footer {
     padding: 1.25rem 1rem;
-    display: initial;
   }
 }
 @media (min-width: 376px) and (max-width: 425px) {
   .__footer {
     padding: 1.25rem 1rem;
-    display: initial;
   }
 }
 @media (max-width: 320px) {
