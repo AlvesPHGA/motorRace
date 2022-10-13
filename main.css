@@ -1977,6 +1977,7 @@ h3 {
 }
 
 .__brands-wrapp-mobile {
+  flex-flow: row nowrap;
   display: none;
   height: 11.25rem;
   width: 100%;
@@ -1984,51 +1985,49 @@ h3 {
 @media (max-width: 320px) {
   .__brands-wrapp-mobile {
     display: flex;
-    flex-flow: row nowrap;
   }
 }
 @media (min-width: 321px) and (max-width: 375px) {
   .__brands-wrapp-mobile {
     display: flex;
-    flex-flow: row nowrap;
   }
 }
 @media (min-width: 376px) and (max-width: 425px) {
   .__brands-wrapp-mobile {
     display: flex;
-    flex-flow: row nowrap;
   }
 }
 .__brands-wrapp-mobile .__slider-contents {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
   overflow: hidden;
 }
-.__brands-wrapp-mobile .__brands-items {
+.__brands-wrapp-mobile .__slider-contents .__brands-items {
   display: flex;
   flex-flow: row nowrap;
-  width: 100%;
   height: 100%;
+  width: 100%;
   margin-left: -100%;
 }
-.__brands-wrapp-mobile .__brands-items .__item {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  gap: 10px;
-  padding: 0 5px;
+.__brands-wrapp-mobile .__slider-contents .__brands-items .__item {
   width: 100%;
-}
-.__brands-wrapp-mobile .__brands-items .__card {
-  width: 150px;
   height: 100%;
-  flex-shrink: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
 }
-.__brands-wrapp-mobile .__brands-items .__card img {
+.__brands-wrapp-mobile .__slider-contents .__brands-items .__item .__card {
+  width: 48vw;
+  height: 100%;
+  padding: 0.25rem;
+  flex-shrink: 0;
+}
+.__brands-wrapp-mobile .__slider-contents .__brands-items .__item .__card img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .__menu-hamburger {

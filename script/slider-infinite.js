@@ -62,7 +62,7 @@ export default class SliderInfinite {
         this.slider_contents.style.transition = "none";
         this.slider_contents.insertAdjacentElement("beforeend", first);
         this.slider_contents.style.marginLeft = "-100%";
-      }, 700);
+      }, 900);
     }, 4000);
   }
 
