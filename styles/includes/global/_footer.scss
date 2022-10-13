@@ -1,17 +1,21 @@
 .__footer {
   background: $cosmicCobalt;
   padding: 2.5rem 8.75rem;
+  display: flex;
 
   @include mobile_s {
     padding: 1.25rem 1rem;
+    display: initial;
   }
 
   @include mobile_m {
     padding: 1.25rem 1rem;
+    display: initial;
   }
 
   @include mobile_l {
     padding: 1.25rem 1rem;
+    display: initial;
   }
 
   .__flex-align-center {
