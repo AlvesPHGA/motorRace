@@ -740,18 +740,33 @@ h3 {
   .__motos-brands .__motos .__slider-motos .__slider-content {
     position: absolute;
     height: 100%;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    scroll-behavior: initial;
+    -ms-scroll-snap-type: initial;
+        scroll-snap-type: initial;
   }
 }
 @media (min-width: 321px) and (max-width: 375px) {
   .__motos-brands .__motos .__slider-motos .__slider-content {
     position: absolute;
     height: 100%;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    scroll-behavior: initial;
+    -ms-scroll-snap-type: initial;
+        scroll-snap-type: initial;
   }
 }
 @media (min-width: 376px) and (max-width: 425px) {
   .__motos-brands .__motos .__slider-motos .__slider-content {
     position: absolute;
     height: 100%;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    scroll-behavior: initial;
+    -ms-scroll-snap-type: initial;
+        scroll-snap-type: initial;
   }
 }
 .__motos-brands .__motos .__slider-motos .__slider-content .__card {
@@ -762,7 +777,33 @@ h3 {
   border-radius: 0.3125rem;
   transition: all 0.1s ease-in;
 }
-.__motos-brands .__motos .__slider-motos .__slider-content .__card:hover, .__motos-brands .__motos .__slider-motos .__slider-content .__card.__active-card {
+.__motos-brands .__motos .__slider-motos .__slider-content .__card:hover {
+  border: 0.125rem solid #a00010;
+  box-shadow: 1px 1px 5px rgba(160, 0, 16, 0.5), -1px -1px 5px rgba(160, 0, 16, 0.5);
+  border-radius: 0.5rem;
+}
+@media (max-width: 320px) {
+  .__motos-brands .__motos .__slider-motos .__slider-content .__card:hover {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .__motos-brands .__motos .__slider-motos .__slider-content .__card:hover {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .__motos-brands .__motos .__slider-motos .__slider-content .__card:hover {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+.__motos-brands .__motos .__slider-motos .__slider-content .__card.__active-card {
   border: 0.125rem solid #a00010;
   box-shadow: 1px 1px 5px rgba(160, 0, 16, 0.5), -1px -1px 5px rgba(160, 0, 16, 0.5);
   border-radius: 0.5rem;

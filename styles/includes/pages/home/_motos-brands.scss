@@ -119,16 +119,28 @@
         @include mobile_s {
           position: absolute;
           height: 100%;
+          gap: 0.5rem;
+          padding: 0.5rem;
+          scroll-behavior: initial;
+          scroll-snap-type: initial;
         }
 
         @include mobile_m {
           position: absolute;
           height: 100%;
+          gap: 0.5rem;
+          padding: 0.5rem;
+          scroll-behavior: initial;
+          scroll-snap-type: initial;
         }
 
         @include mobile_l {
           position: absolute;
           height: 100%;
+          gap: 0.5rem;
+          padding: 0.5rem;
+          scroll-behavior: initial;
+          scroll-snap-type: initial;
         }
 
         .__card {
@@ -139,7 +151,31 @@
           border-radius: 0.3125rem;
           transition: all 0.1s ease-in;
 
-          &:hover,
+          &:hover {
+            border: 0.125rem solid $carmine;
+            box-shadow: 1px 1px 5px rgba($color: $carmine, $alpha: 0.5),
+              -1px -1px 5px rgba($color: $carmine, $alpha: 0.5);
+            border-radius: 0.5rem;
+
+            @include mobile_s {
+              border: none;
+              box-shadow: none;
+              border-radius: 0;
+            }
+
+            @include mobile_m {
+              border: none;
+              box-shadow: none;
+              border-radius: 0;
+            }
+
+            @include mobile_l {
+              border: none;
+              box-shadow: none;
+              border-radius: 0;
+            }
+          }
+
           &.__active-card {
             border: 0.125rem solid $carmine;
             box-shadow: 1px 1px 5px rgba($color: $carmine, $alpha: 0.5),
