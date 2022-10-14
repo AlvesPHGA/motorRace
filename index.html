@@ -257,30 +257,30 @@
          <h2 data-anima class="__title">Contato</h2>
          <div class="__back-img"></div>
          <section class="__contacts __flex-align-center __width-1200">
-            <form>
+            <form data-validation>
                <div class="__input-field __flex-column">
                   <label for="name">Nome</label>
-                  <input type="text" id="name" name="name">
+                  <input data-required type="text" id="name" name="name">
                </div>
 
                <div class="__input-field __flex-column">
                   <label for="email">Email</label>
-                  <input type="email" id="email" name="email">
+                  <input data-required type="email" id="email" name="email">
                </div>
 
                <div class="__input-field __flex-column">
                   <label for="numberPhone">Tel. / WhatsApp</label>
-                  <input type="tel" id="numberPhone" name="numberPhone">
+                  <input data-required type="tel" id="numberPhone" name="numberPhone">
                </div>
 
                <div class="__input-field __flex-column">
                   <label for="subject">Assunto</label>
-                  <input type="text" id="subject" name="subject">
+                  <input data-required type="text" id="subject" name="subject">
                </div>
 
                <div class="__input-field __flex-column">
                   <label for="message">Mensagem</label>
-                  <textarea name="message" id="message"></textarea>
+                  <textarea data-required name="message" id="message"></textarea>
                </div>
 
                <button class="__button">Enviar</button>
