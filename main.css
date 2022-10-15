@@ -1579,6 +1579,10 @@ h3 {
     width: 100%;
   }
 }
+.__contact .__contacts form .__input-field input.__error,
+.__contact .__contacts form .__input-field textarea.__error {
+  border: 1px solid red;
+}
 .__contact .__contacts form .__input-field input {
   height: 3.25rem;
 }

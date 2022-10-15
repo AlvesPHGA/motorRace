@@ -226,6 +226,10 @@
           @include mobile_l {
             width: 100%;
           }
+
+          &.__error {
+            border: 1px solid red;
+          }
         }
 
         input {
