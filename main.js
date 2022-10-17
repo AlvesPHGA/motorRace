@@ -8,6 +8,12 @@ import Validation from "./script/validation.js";
 const menu_hanburger = new ActiveMenuHamburger(".__menu-hamburger");
 menu_hanburger.init();
 
+const slider_subheader = new SliderInfinite(
+  "[data-subheader]",
+  ".__slider-container .__slider-items"
+);
+slider_subheader.init();
+
 const anima_section = new AnimaScroll("[data-anima]");
 anima_section.init();
 
