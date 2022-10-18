@@ -1,7 +1,5 @@
 .__subheader {
-  width: 100%;
   height: 18.75rem;
-  flex-flow: row nowrap;
 
   @include mobile_s {
     height: 16.25rem;
@@ -18,125 +16,105 @@
     margin-top: 5rem;
   }
 
-  .__slider-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  .__slider-container .__slider-items .__slider-item {
+    text-align: center;
+    background: url("../../../../images/jpg/imgSubheader.jpg") center no-repeat;
+    background-size: 100% 100%;
+    padding-top: 1rem;
 
-    .__slider-items {
-      display: flex;
-      flex-flow: row nowrap;
-      width: 100%;
-
-      height: 100%;
-
-      margin-left: -100%;
-    }
-
-    .__slider-item {
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      background: url("../../../../images/jpg/imgSubheader.jpg") center
+    @include mobile_s {
+      background: url("../../../../images/jpg/imgSubheader-mobile.jpg") center
         no-repeat;
       background-size: 100% 100%;
-      padding-top: 1rem;
-      flex-shrink: 0;
+    }
 
+    @include mobile_m {
+      background: url("../../../../images/jpg/imgSubheader-mobile.jpg") center
+        no-repeat;
+      background-size: 100% 100%;
+    }
+
+    @include mobile_l {
+      background: url("../../../../images/jpg/imgSubheader-mobile.jpg") center
+        no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .__title {
       @include mobile_s {
-        background: url("../../../../images/jpg/imgSubheader-mobile.jpg") center
-          no-repeat;
-        background-size: 100% 100%;
+        &::before,
+        &::after {
+          width: 28vw;
+        }
       }
 
       @include mobile_m {
-        background: url("../../../../images/jpg/imgSubheader-mobile.jpg") center
-          no-repeat;
-        background-size: 100% 100%;
+        &::before,
+        &::after {
+          width: 28vw;
+        }
       }
 
       @include mobile_l {
-        background: url("../../../../images/jpg/imgSubheader-mobile.jpg") center
-          no-repeat;
-        background-size: 100% 100%;
-      }
-
-      .__title {
-        @include mobile_s {
-          &::before,
-          &::after {
-            width: 28vw;
-          }
-        }
-
-        @include mobile_m {
-          &::before,
-          &::after {
-            width: 28vw;
-          }
-        }
-
-        @include mobile_l {
-          &::before,
-          &::after {
-            width: 28vw;
-          }
+        &::before,
+        &::after {
+          width: 28vw;
         }
       }
+    }
 
-      p {
-        @include text(
-          $f_size: 1.25rem,
-          $f_weight: 400,
-          $color: $black,
-          $l_height: 1.87rem
-        );
+    p {
+      @include text(
+        $f_size: 1.25rem,
+        $f_weight: 400,
+        $color: $black,
+        $l_height: 1.87rem
+      );
 
-        width: 34.125rem;
-        margin: 1rem auto 1.25rem;
+      width: 34.125rem;
+      margin: 1rem auto 1.25rem;
 
-        @include mobile_s {
-          width: 100%;
-          font-size: 1rem;
-          line-height: 1.5rem;
-          padding: 0 1rem;
-        }
-
-        @include mobile_m {
-          width: 100%;
-          font-size: 1rem;
-          line-height: 1.5rem;
-          padding: 0 1rem;
-        }
-
-        @include mobile_l {
-          width: 100%;
-          font-size: 1rem;
-          line-height: 1.5rem;
-          padding: 0 1rem;
-        }
+      @include mobile_s {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: 0 1rem;
       }
 
-      .__link {
-        @include btn_link(
-          $f_size: 1.25rem,
-          $f_weight: 700,
-          $color: $darkImperialBlue,
-          $l_height: normal
-        );
+      @include mobile_m {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: 0 1rem;
+      }
 
-        padding: 0.625rem 1.25rem;
-        border: 0.125rem solid $darkImperialBlue;
-        border-radius: 0.3125rem;
-        display: inline-block;
-        transition: all 0.7s ease;
-        letter-spacing: 0.125rem;
-        text-transform: uppercase;
+      @include mobile_l {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: 0 1rem;
+      }
+    }
 
-        &:hover {
-          background-color: $darkImperialBlue;
-          color: $white;
-        }
+    .__link {
+      @include btn_link(
+        $f_size: 1.25rem,
+        $f_weight: 700,
+        $color: $darkImperialBlue,
+        $l_height: normal
+      );
+
+      padding: 0.625rem 1.25rem;
+      border: 0.125rem solid $darkImperialBlue;
+      border-radius: 0.3125rem;
+      display: inline-block;
+      transition: all 0.7s ease;
+      letter-spacing: 0.125rem;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $darkImperialBlue;
+        color: $white;
       }
     }
   }
