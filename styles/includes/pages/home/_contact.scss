@@ -215,6 +215,13 @@
           font-size: 1.25rem;
           padding: 0.25rem 0.5rem;
 
+          @include text(
+            $f_size: 1.25rem,
+            $f_weight: 400,
+            $color: $white,
+            $l_height: normal
+          );
+
           @include mobile_s {
             width: 100%;
           }
