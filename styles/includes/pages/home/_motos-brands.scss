@@ -88,6 +88,8 @@
       padding: 1.75rem 0.5rem;
       overflow: hidden;
       width: 100%;
+      display: flex;
+      align-items: center;
 
       @include mobile_s {
         height: 10rem;

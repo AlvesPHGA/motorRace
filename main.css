@@ -697,6 +697,8 @@ h3 {
   padding: 1.75rem 0.5rem;
   overflow: hidden;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 320px) {
   .__motos-brands .__motos .__slider-motos {
