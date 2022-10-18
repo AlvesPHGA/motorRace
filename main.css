@@ -1689,6 +1689,10 @@ h3 {
   display: flex;
   gap: 1.25rem;
   margin-top: 2rem;
+  align-items: center;
+}
+.__contact .__contacts .__box-info-contact .__info-contact svg {
+  margin-top: 4px;
 }
 @media (max-width: 320px) {
   .__contact .__contacts .__box-info-contact .__info-contact {
@@ -1740,6 +1744,28 @@ h3 {
 }
 .__contact .__contacts .__box-info-contact .__info-contact:first-child {
   margin-top: 0;
+}
+.__contact .__contacts .__box-info-contact .__info-contact:nth-child(4) {
+  align-items: initial;
+}
+.__contact .__contacts .__box-info-contact .__info-contact:nth-child(4) svg {
+  flex-shrink: 0;
+  margin-top: 0.75rem;
+}
+@media (max-width: 320px) {
+  .__contact .__contacts .__box-info-contact .__info-contact:nth-child(4) {
+    align-items: center;
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .__contact .__contacts .__box-info-contact .__info-contact:nth-child(4) {
+    align-items: center;
+  }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+  .__contact .__contacts .__box-info-contact .__info-contact:nth-child(4) {
+    align-items: center;
+  }
 }
 .__contact .__contacts .__box-info-contact .__info-contact svg {
   width: 1.75rem;

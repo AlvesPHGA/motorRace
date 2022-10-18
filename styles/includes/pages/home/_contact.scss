@@ -350,6 +350,11 @@
         display: flex;
         gap: 1.25rem;
         margin-top: 2rem;
+        align-items: center;
+
+        svg {
+          margin-top: 4px;
+        }
 
         @include mobile_s {
           flex-direction: column;
@@ -404,6 +409,26 @@
 
         &:first-child {
           margin-top: 0;
+        }
+
+        &:nth-child(4) {
+          align-items: initial;
+          svg {
+            flex-shrink: 0;
+            margin-top: 0.75rem;
+          }
+
+          @include mobile_s {
+            align-items: center;
+          }
+
+          @include mobile_m {
+            align-items: center;
+          }
+
+          @include mobile_l {
+            align-items: center;
+          }
         }
 
         svg {
